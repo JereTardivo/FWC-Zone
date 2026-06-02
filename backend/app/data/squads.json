@@ -13377,5 +13377,296 @@
         "age": null
       }
     ]
+  },
+  "TUR": {
+    "coach": "Vincenzo Montella",
+    "players": [
+      {
+        "name": "Ugurcan Cakir",
+        "position": "GK",
+        "club": "Galatasaray",
+        "club_country": "TUR",
+        "fifa_rating": 82,
+        "market_value_eur": 30000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Altay Bayindir",
+        "position": "GK",
+        "club": "Manchester United",
+        "club_country": "ING",
+        "fifa_rating": 76,
+        "market_value_eur": 8000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Mert Gunok",
+        "position": "GK",
+        "club": "Besiktas",
+        "club_country": "TUR",
+        "fifa_rating": 76,
+        "market_value_eur": 3000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Ferdi Kadioglu",
+        "position": "DF",
+        "club": "Brighton",
+        "club_country": "ING",
+        "fifa_rating": 79,
+        "market_value_eur": 28000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Merih Demiral",
+        "position": "DF",
+        "club": "Al Ahli",
+        "club_country": "ARA",
+        "fifa_rating": 80,
+        "market_value_eur": 15000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Zeki Celik",
+        "position": "DF",
+        "club": "Roma",
+        "club_country": "ITA",
+        "fifa_rating": 77,
+        "market_value_eur": 12000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Ozan Kabak",
+        "position": "DF",
+        "club": "Hoffenheim",
+        "club_country": "ALE",
+        "fifa_rating": 79,
+        "market_value_eur": 25000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Mert Muldur",
+        "position": "DF",
+        "club": "Fenerbahce",
+        "club_country": "TUR",
+        "fifa_rating": 76,
+        "market_value_eur": 10000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Abdulkerim Bardakci",
+        "position": "DF",
+        "club": "Galatasaray",
+        "club_country": "TUR",
+        "fifa_rating": 78,
+        "market_value_eur": 14000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Eren Elmali",
+        "position": "DF",
+        "club": "Galatasaray",
+        "club_country": "TUR",
+        "fifa_rating": 76,
+        "market_value_eur": 12000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Caglar Soyuncu",
+        "position": "DF",
+        "club": "Fenerbahce",
+        "club_country": "TUR",
+        "fifa_rating": 78,
+        "market_value_eur": 10000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Samet Akaydin",
+        "position": "DF",
+        "club": "Rizespor",
+        "club_country": "TUR",
+        "fifa_rating": 75,
+        "market_value_eur": 5000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Arda Guler",
+        "position": "MF",
+        "club": "Real Madrid",
+        "club_country": "ESP",
+        "fifa_rating": 84,
+        "market_value_eur": 60000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Can Uzun",
+        "position": "MF",
+        "club": "Eintracht Frankfurt",
+        "club_country": "ALE",
+        "fifa_rating": 79,
+        "market_value_eur": 35000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Orkun Kokcu",
+        "position": "MF",
+        "club": "Besiktas",
+        "club_country": "TUR",
+        "fifa_rating": 81,
+        "market_value_eur": 35000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Hakan Calhanoglu",
+        "position": "MF",
+        "club": "Inter",
+        "club_country": "ITA",
+        "fifa_rating": 86,
+        "market_value_eur": 30000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Ismail Yuksek",
+        "position": "MF",
+        "club": "Fenerbahce",
+        "club_country": "TUR",
+        "fifa_rating": 77,
+        "market_value_eur": 18000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Kaan Ayhan",
+        "position": "MF",
+        "club": "Galatasaray",
+        "club_country": "TUR",
+        "fifa_rating": 76,
+        "market_value_eur": 6000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Salih Ozcan",
+        "position": "MF",
+        "club": "Borussia Dortmund",
+        "club_country": "ALE",
+        "fifa_rating": 77,
+        "market_value_eur": 12000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Kenan Yildiz",
+        "position": "FW",
+        "club": "Juventus",
+        "club_country": "ITA",
+        "fifa_rating": 84,
+        "market_value_eur": 75000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Baris Alper Yilmaz",
+        "position": "FW",
+        "club": "Galatasaray",
+        "club_country": "TUR",
+        "fifa_rating": 79,
+        "market_value_eur": 30000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Kerem Akturkoglu",
+        "position": "FW",
+        "club": "Fenerbahce",
+        "club_country": "TUR",
+        "fifa_rating": 80,
+        "market_value_eur": 28000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Yunus Akgun",
+        "position": "FW",
+        "club": "Galatasaray",
+        "club_country": "TUR",
+        "fifa_rating": 77,
+        "market_value_eur": 16000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Oguz Aydin",
+        "position": "FW",
+        "club": "Fenerbahce",
+        "club_country": "TUR",
+        "fifa_rating": 74,
+        "market_value_eur": 8000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Deniz Gul",
+        "position": "FW",
+        "club": "Porto",
+        "club_country": "POR",
+        "fifa_rating": 73,
+        "market_value_eur": 6000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Irfan Can Kahveci",
+        "position": "FW",
+        "club": "Fenerbahce",
+        "club_country": "TUR",
+        "fifa_rating": 77,
+        "market_value_eur": 10000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      }
+    ]
   }
 }
