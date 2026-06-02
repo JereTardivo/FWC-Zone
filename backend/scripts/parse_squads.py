@@ -45,31 +45,44 @@ def clean_name(raw: str) -> str:
     return name.strip(" ,.\u201c\u201d\"")
 
 
+def _make_player(name_raw: str, inside: str, position: str) -> dict | None:
+    name = clean_name(name_raw)
+    if not name:
+        return None
+    inside = inside.strip()
+    if "," in inside:
+        club, cc = inside.rsplit(",", 1)
+        club, cc = club.strip(), cc.strip()
+    else:
+        club, cc = inside.strip(), None
+    return {
+        "name": name,
+        "position": position,
+        "club": club or None,
+        "club_country": cc or None,
+        "fifa_rating": None,
+        "market_value_eur": None,
+        "caps": None,
+        "goals": None,
+        "age": None,
+    }
+
+
 def parse_section(body: str, position: str) -> list[dict]:
     players = []
+    last_end = 0
     for m in PLAYER_RE.finditer(body):
-        name = clean_name(m.group(1))
-        inside = m.group(2).strip()
-        if not name:
-            continue
-        if "," in inside:
-            club, cc = inside.rsplit(",", 1)
-            club, cc = club.strip(), cc.strip()
-        else:
-            club, cc = inside.strip(), None
-        players.append(
-            {
-                "name": name,
-                "position": position,
-                "club": club or None,
-                "club_country": cc or None,
-                "fifa_rating": None,
-                "market_value_eur": None,
-                "caps": None,
-                "goals": None,
-                "age": None,
-            }
-        )
+        p = _make_player(m.group(1), m.group(2), position)
+        if p:
+            players.append(p)
+        last_end = m.end()
+    # recuperar entrada final truncada (sin parentesis de cierre por corte en el txt)
+    tail = body[last_end:]
+    mt = re.search(r"([^()]*)\(([^()]*)$", tail)
+    if mt:
+        p = _make_player(mt.group(1), mt.group(2), position)
+        if p:
+            players.append(p)
     return players
 
 
@@ -130,9 +143,10 @@ def main():
     squads = json.loads(squads_path.read_text(encoding="utf-8"))
 
     for tid, team in parsed.items():
-        if tid in PRESERVE_ENRICHED and tid in squads:
-            # mantener exactamente lo cargado a mano (ya enriquecido)
-            continue
+        old = squads.get(tid)
+        if old:
+            # conservar fifa_rating/market_value/caps/goals/age ya cargados (match por nombre)
+            team = merge_enriched(old, team)
         squads[tid] = team
 
     squads_path.write_text(
