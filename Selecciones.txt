@@ -249,6 +249,13 @@ Mediocampistas: Arda Guler (Real Madrid, ESP), Can Uzun (Eintracht Frankfurt, AL
 Delanteros: Kenan Yildiz (Juventus, ITA), Baris Alper Yilmaz (Galatasaray, TUR), Kerem Akturkoglu (Fenerbahce, TUR), Yunus Akgun (Galatasaray, TUR), Oguz Aydin (Fenerbahce, TUR), Deniz Gul (Porto, POR) e Irfan Can Kahveci (Fenerbahce, TUR).
 DT: Vincenzo Montella.
 
+Jordania
+Arqueros: Yazeed Abu Laila (Al-Hussein, JOR), Abdullah Al-Fakhoury (Al-Wehdat, JOR) y Nour Bani Attia (Al-Faisaly, JOR).
+Defensores: Abdullah Naseeb (Al-Zawraa, IRQ), Saad Al-Rousan (Al-Hussein, JOR), Yazan Al-Arab (FC Seoul, COR), Saleem Obeid (Al-Hussein, JOR), Mohammad Abu Al-Nadi (Selangor, MAS), Hussam Abu Dahab (Al-Salmiya, KUW), Ihsan Haddad (Al-Hussein, JOR) y Anas Badawi (Al-Faisaly, JOR).
+Mediocampistas: Muhannad Abu Taha (Al-Quwa Al-Jawiya, IRQ), Mohammad Abu Hashish (Al-Karma, IRQ), Nour Al-Rawabdeh (Selangor, MAS), Nizar Al-Rashdan (Qatar SC, QAT), Ibrahim Saadeh (Al-Karma, IRQ), Rajai Ayed (Al-Hussein, JOR), Amer Jamous (Al-Zawraa, IRQ) y Mohammad Al-Dawood (Al-Wehdat, JOR).
+Delanteros: Mahmoud Mardi (Al-Hussein, JOR), Awda Al-Fakhoury (Pyramids FC, EGI), Mousa Al-Taamari (Stade Rennais, FRA), Mohammad Abu Zureiq (Raja Casablanca, MAR), Ali Azayza (Al-Shabab, ARA), Ibrahim Sabra (Lokomotiva Zagreb, CRO) y Ali Alwan (Al-Sailiya, QAT).
+DT: Jamal Sellami.
+
 Australia
 Arqueros: Patrick Beach (Melbourne City, AUS), Paul Izzo (Randers FC, DIN) y Mathew Ryan (Lens, FRA).
 Defensores: Aziz Behich (Melbourne City, AUS), Jordan Bos (Westerlo, BEL), Cameron Burgess (Swansea City, GAL), Alessandro Circati (Parma, ITA), Milos Degenek (FK TSC Bačka Topola, SRB), Jason Geria (Albirex Niigata, JAP), Lucas Herrington (Brisbane Roar, AUS), Jacob Italiano (Borussia Mönchengladbach, ALE), Harry Souttar (Leicester City, ING) y Kai Trewin (Melbourne City, AUS).
@@ -304,13 +311,6 @@ Defensores: Ayoub Al Alawi (Al Gharafa, CAT), Boualem Khoukhi (Al Sadd, CAT), Ho
 Mediocampistas: Assim Madibo (Al Wakrah, CAT), Abdulaziz Hatem (Al Rayyan, CAT), Ahmed Fathy (Al Arabi Doha, CAT), Karim Boudiaf (Al Duhail, CAT), Jassim Gaber (Al Rayyan, CAT) y Mohamed Mannai (Al Shamal, CAT).
 Delanteros: Ahmed Al Janehi (Al Gharafa, CAT), Ahmed Alaa (Al Rayyan, CAT), Akram Afif (Al Sadd, CAT), Almoez Ali (Al Duhail, CAT), Edmilson Junior (Al Duhail, CAT), Hassan Al Haydos (Al Sadd, CAT), Mohammed Muntari (Al Gharafa, CAT), Tahsin Mohammed (Al Duhail, CAT) y Youssef Abdulrazzaq (Al Sadd, CAT).
 DT: Julen Lopetegui.
-
-
-Arqueros: Benjamin Asare (Accra Hearts of Oak, GHA), Lawrence Ati-Zigi (St. Gallen, SUI), Joseph Anang (St Patrick's Athletic, IRL), Salomon Agbasi (Accra Hearts of Oak, GHA) y Paul Reverson (Ajax, PBJ).
-Defensores: Baba Abdul Rahman (PAOK, GRE), Gideon Mensah (Auxerre, FRA), Marvin Senaya (Auxerre, FRA), Alidu Seidu (Rennes, FRA), Abdul Mumin (Rayo Vallecano, ESP), Jerome Opoku (Istanbul Başakşehir, TUR), Jonas Adjetey (Wolfsburgo, ALE), Kojo Oppong Preprah (Niza, FRA) y Alexander Djiku (Spartak Moscú, RUS).
-Mediocampistas: Elisha Owusu (Auxerre, FRA), Thomas Partey (Villarreal, ESP), Kwasi Sibo (Real Oviedo, ESP), Augustine Boakye (Saint-Étienne, FRA), Caleb Yirenkyi (Nordsjælland, DIN), Abdul Fatawu Issahaku (Leicester City, ING) y Kamal Deen Sulemana (Atalanta, ITA).
-Delanteros: Christopher Bonsu Baah (Al-Qadisiyah, ARA), Ernest Nuamah (Olympique de Lyon, FRA), Antoine Semenyo (Manchester City, ING), Brandon Thomas-Asante (Coventry City, ING), Prince Kwabena Adu (Viktoria Plzeň, RPC), Iñaki Williams (Athletic Club, ESP) y Jordan Ayew (Leicester City, ING).
-DT: Carlos Queiroz.
 
 Uruguay
 Arqueros: Fernando Muslera (Estudiantes de La Plata, ARG), Sergio Rochet (Internacional de Porto Alegre, BRA) y Santiago Mele (Monterrey, MEX).

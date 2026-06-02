@@ -13668,5 +13668,296 @@
         "age": null
       }
     ]
+  },
+  "JOR": {
+    "coach": "Jamal Sellami",
+    "players": [
+      {
+        "name": "Yazeed Abu Laila",
+        "position": "GK",
+        "club": "Al-Hussein",
+        "club_country": "JOR",
+        "fifa_rating": 68,
+        "market_value_eur": 300000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Abdullah Al-Fakhoury",
+        "position": "GK",
+        "club": "Al-Wehdat",
+        "club_country": "JOR",
+        "fifa_rating": 66,
+        "market_value_eur": 200000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Nour Bani Attia",
+        "position": "GK",
+        "club": "Al-Faisaly",
+        "club_country": "JOR",
+        "fifa_rating": 65,
+        "market_value_eur": 150000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Abdullah Naseeb",
+        "position": "DF",
+        "club": "Al-Zawraa",
+        "club_country": "IRQ",
+        "fifa_rating": 67,
+        "market_value_eur": 400000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Saad Al-Rousan",
+        "position": "DF",
+        "club": "Al-Hussein",
+        "club_country": "JOR",
+        "fifa_rating": 68,
+        "market_value_eur": 500000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Yazan Al-Arab",
+        "position": "DF",
+        "club": "FC Seoul",
+        "club_country": "COR",
+        "fifa_rating": 70,
+        "market_value_eur": 1000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Saleem Obeid",
+        "position": "DF",
+        "club": "Al-Hussein",
+        "club_country": "JOR",
+        "fifa_rating": 68,
+        "market_value_eur": 500000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Mohammad Abu Al-Nadi",
+        "position": "DF",
+        "club": "Selangor",
+        "club_country": "MAS",
+        "fifa_rating": 68,
+        "market_value_eur": 600000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Hussam Abu Dahab",
+        "position": "DF",
+        "club": "Al-Salmiya",
+        "club_country": "KUW",
+        "fifa_rating": 67,
+        "market_value_eur": 400000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Ihsan Haddad",
+        "position": "DF",
+        "club": "Al-Hussein",
+        "club_country": "JOR",
+        "fifa_rating": 67,
+        "market_value_eur": 400000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Anas Badawi",
+        "position": "DF",
+        "club": "Al-Faisaly",
+        "club_country": "JOR",
+        "fifa_rating": 67,
+        "market_value_eur": 400000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Muhannad Abu Taha",
+        "position": "MF",
+        "club": "Al-Quwa Al-Jawiya",
+        "club_country": "IRQ",
+        "fifa_rating": 67,
+        "market_value_eur": 400000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Mohammad Abu Hashish",
+        "position": "MF",
+        "club": "Al-Karma",
+        "club_country": "IRQ",
+        "fifa_rating": 67,
+        "market_value_eur": 400000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Nour Al-Rawabdeh",
+        "position": "MF",
+        "club": "Selangor",
+        "club_country": "MAS",
+        "fifa_rating": 70,
+        "market_value_eur": 1200000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Nizar Al-Rashdan",
+        "position": "MF",
+        "club": "Qatar SC",
+        "club_country": "QAT",
+        "fifa_rating": 70,
+        "market_value_eur": 1000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Ibrahim Saadeh",
+        "position": "MF",
+        "club": "Al-Karma",
+        "club_country": "IRQ",
+        "fifa_rating": 68,
+        "market_value_eur": 600000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Rajai Ayed",
+        "position": "MF",
+        "club": "Al-Hussein",
+        "club_country": "JOR",
+        "fifa_rating": 68,
+        "market_value_eur": 500000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Amer Jamous",
+        "position": "MF",
+        "club": "Al-Zawraa",
+        "club_country": "IRQ",
+        "fifa_rating": 68,
+        "market_value_eur": 600000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Mohammad Al-Dawood",
+        "position": "MF",
+        "club": "Al-Wehdat",
+        "club_country": "JOR",
+        "fifa_rating": 68,
+        "market_value_eur": 500000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Mahmoud Mardi",
+        "position": "FW",
+        "club": "Al-Hussein",
+        "club_country": "JOR",
+        "fifa_rating": 69,
+        "market_value_eur": 800000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Awda Al-Fakhoury",
+        "position": "FW",
+        "club": "Pyramids FC",
+        "club_country": "EGI",
+        "fifa_rating": 70,
+        "market_value_eur": 1500000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Mousa Al-Taamari",
+        "position": "FW",
+        "club": "Stade Rennais",
+        "club_country": "FRA",
+        "fifa_rating": 76,
+        "market_value_eur": 8000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Mohammad Abu Zureiq",
+        "position": "FW",
+        "club": "Raja Casablanca",
+        "club_country": "MAR",
+        "fifa_rating": 70,
+        "market_value_eur": 1500000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Ali Azayza",
+        "position": "FW",
+        "club": "Al-Shabab",
+        "club_country": "ARA",
+        "fifa_rating": 69,
+        "market_value_eur": 1000000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Ibrahim Sabra",
+        "position": "FW",
+        "club": "Lokomotiva Zagreb",
+        "club_country": "CRO",
+        "fifa_rating": 68,
+        "market_value_eur": 800000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      },
+      {
+        "name": "Ali Alwan",
+        "position": "FW",
+        "club": "Al-Sailiya",
+        "club_country": "QAT",
+        "fifa_rating": 70,
+        "market_value_eur": 1200000,
+        "caps": null,
+        "goals": null,
+        "age": null
+      }
+    ]
   }
 }
