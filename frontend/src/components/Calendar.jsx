@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../api.js";
 import { Loader2, CalendarDays } from "lucide-react";
+import Flag from "./Flag.jsx";
 
 const DAY_NAMES = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
 
@@ -101,14 +102,31 @@ function MatchRow({ m }) {
         <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-slate-300">
           Grupo {m.group}
         </span>
-        <span className="flex-1 text-right font-medium">{m.home.name}</span>
-        <span className="text-slate-500 text-sm px-2">vs</span>
-        <span className="flex-1 font-medium">{m.away.name}</span>
-        {p && (
-          <span className="text-xs text-slate-400 tabular-nums w-16 text-right">
-            {p.expected_home_goals} - {p.expected_away_goals}
-          </span>
-        )}
+        <span className="flex-1 flex items-center justify-end gap-2 min-w-0">
+          <span className="font-medium truncate">{m.home.name}</span>
+          {p && (
+            <span className="text-xs text-accent tabular-nums shrink-0">
+              ({p.expected_home_goals})
+            </span>
+          )}
+          <Flag
+            teamId={m.home.id}
+            className="w-5 h-3.5 rounded-sm shrink-0 ring-1 ring-white/10"
+          />
+        </span>
+        <span className="text-slate-500 text-sm px-1">vs</span>
+        <span className="flex-1 flex items-center justify-start gap-2 min-w-0">
+          <Flag
+            teamId={m.away.id}
+            className="w-5 h-3.5 rounded-sm shrink-0 ring-1 ring-white/10"
+          />
+          {p && (
+            <span className="text-xs text-blue-300 tabular-nums shrink-0">
+              ({p.expected_away_goals})
+            </span>
+          )}
+          <span className="font-medium truncate">{m.away.name}</span>
+        </span>
       </div>
       {p && (
         <div className="flex items-center gap-3">
