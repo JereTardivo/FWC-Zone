@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { api } from "../api.js";
 import { Loader2, CalendarDays } from "lucide-react";
 import Flag from "./Flag.jsx";
+import MatchModal from "./MatchModal.jsx";
 
 const DAY_NAMES = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
 
@@ -16,6 +17,7 @@ export default function Calendar() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [active, setActive] = useState("1");
+  const [selected, setSelected] = useState(null);
 
   useEffect(() => {
     api.fixtures().then((d) => setData(d.matchdays)).catch((e) => setError(e.message));
@@ -74,18 +76,22 @@ export default function Calendar() {
               <h3 className="text-sm font-semibold text-accent mb-2">{fmtDate(date)}</h3>
               <div className="grid gap-2">
                 {ms.map((m, i) => (
-                  <MatchRow key={i} m={m} />
+                  <MatchRow key={i} m={m} onClick={() => setSelected(m)} />
                 ))}
               </div>
             </div>
           ))}
         </div>
       )}
+
+      {selected && (
+        <MatchModal match={selected} onClose={() => setSelected(null)} />
+      )}
     </div>
   );
 }
 
-function MatchRow({ m }) {
+function MatchRow({ m, onClick }) {
   const p = m.prediction;
   const segs = p
     ? [
@@ -96,7 +102,10 @@ function MatchRow({ m }) {
     : [];
 
   return (
-    <div className="card p-3 flex flex-col gap-2">
+    <div
+      onClick={onClick}
+      className="card p-3 flex flex-col gap-2 cursor-pointer hover:bg-white/5 hover:ring-1 hover:ring-accent/30 transition"
+    >
       <div className="flex items-center gap-3">
         <span className="text-xs text-slate-500 w-12 tabular-nums">{m.time}</span>
         <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-slate-300">

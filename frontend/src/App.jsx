@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Trophy, Grid3x3, Swords, Cpu, CalendarDays, GitBranch } from "lucide-react";
+import { Trophy, Grid3x3, Cpu, CalendarDays, GitBranch } from "lucide-react";
 import Groups from "./components/Groups.jsx";
-import MatchPredictor from "./components/MatchPredictor.jsx";
 import Simulation from "./components/Simulation.jsx";
 import Calendar from "./components/Calendar.jsx";
 import Bracket from "./components/Bracket.jsx";
@@ -11,7 +10,6 @@ const TABS = [
   { id: "groups", label: "Grupos", icon: Grid3x3 },
   { id: "calendar", label: "Calendario", icon: CalendarDays },
   { id: "bracket", label: "Llaves", icon: GitBranch },
-  { id: "predict", label: "Predictor de partido", icon: Swords },
   { id: "simulate", label: "Simulación Monte Carlo", icon: Cpu },
 ];
 
@@ -60,7 +58,6 @@ export default function App() {
             {tab === "groups" && <Groups onSelectTeam={setSelectedTeam} />}
             {tab === "calendar" && <Calendar />}
             {tab === "bracket" && <Bracket />}
-            {tab === "predict" && <MatchPredictor />}
             {tab === "simulate" && <Simulation />}
           </>
         )}
