@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { api } from "../api.js";
 import { confBadge } from "../utils.js";
+import Flag from "./Flag.jsx";
 import {
   ArrowLeft,
   Loader2,
-  Shield,
   User,
   Search,
   Star,
@@ -128,9 +128,10 @@ function Detail({ data }) {
       {/* Cabecera */}
       <div className="card p-5">
         <div className="flex flex-wrap items-center gap-3">
-          <div className="p-2 rounded-xl bg-accent/15 text-accent">
-            <Shield size={26} />
-          </div>
+          <Flag
+            teamId={t.id}
+            className="w-12 h-8 rounded-md ring-1 ring-white/15 shrink-0"
+          />
           <div className="flex-1">
             <h2 className="text-2xl font-extrabold">{t.name}</h2>
             <div className="flex items-center gap-2 mt-1 text-sm">
