@@ -10,15 +10,15 @@ import TimezoneSelector from "./components/TimezoneSelector.jsx";
 import { useTimezone } from "./hooks/useTimezone.js";
 
 const TABS = [
-  { id: "groups", label: "Grupos", icon: Grid3x3 },
   { id: "calendar", label: "Calendario", icon: CalendarDays },
+  { id: "groups", label: "Grupos", icon: Grid3x3 },
   { id: "bracket", label: "Llaves", icon: GitBranch },
   { id: "venues", label: "Sedes", icon: MapPin },
   { id: "simulate", label: "Simulación Monte Carlo", icon: Cpu },
 ];
 
 export default function App() {
-  const [tab, setTab] = useState("groups");
+  const [tab, setTab] = useState("calendar");
   const [selectedTeam, setSelectedTeam] = useState(null);
   const timezone = useTimezone();
 
