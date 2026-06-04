@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../api.js";
-import { Loader2, CalendarDays } from "lucide-react";
+import { Loader2, CalendarDays, MapPin } from "lucide-react";
 import Flag from "./Flag.jsx";
 import MatchModal from "./MatchModal.jsx";
 
@@ -111,6 +111,12 @@ function MatchRow({ m, onClick }) {
         <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-slate-300">
           Grupo {m.group}
         </span>
+        {m.venue && (
+          <span className="text-[10px] text-slate-500 flex items-center gap-0.5 truncate">
+            <MapPin size={10} />
+            {m.venue.city}
+          </span>
+        )}
         <span className="flex-1 flex items-center justify-end gap-2 min-w-0">
           <span className="font-medium truncate">{m.home.name}</span>
           {p && (

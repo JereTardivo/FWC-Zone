@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "description": "Las 16 sedes oficiales de la Copa Mundial de Fútbol 2026 (Canadá, EE.UU., México). Capacidades aproximadas en configuración mundialista. Fuente: Wikipedia / FIFA.",
+    "source": "https://es.wikipedia.org/wiki/Copa_Mundial_de_Futbol_de_2026"
+  },
+  "venues": [
+    { "id": "nyc", "stadium": "MetLife Stadium", "city": "Nueva York / Nueva Jersey", "country": "USA", "capacity": 82500, "role": "Final" },
+    { "id": "dal", "stadium": "AT&T Stadium", "city": "Dallas", "country": "USA", "capacity": 80000, "role": "Semifinal" },
+    { "id": "atl", "stadium": "Mercedes-Benz Stadium", "city": "Atlanta", "country": "USA", "capacity": 71000, "role": "Semifinal" },
+    { "id": "kc", "stadium": "Arrowhead Stadium", "city": "Kansas City", "country": "USA", "capacity": 76000, "role": "Cuartos" },
+    { "id": "hou", "stadium": "NRG Stadium", "city": "Houston", "country": "USA", "capacity": 72000, "role": "Cuartos" },
+    { "id": "la", "stadium": "SoFi Stadium", "city": "Los Ángeles", "country": "USA", "capacity": 70000, "role": "Cuartos" },
+    { "id": "sf", "stadium": "Levi's Stadium", "city": "San Francisco", "country": "USA", "capacity": 70000, "role": "Grupos / Octavos" },
+    { "id": "mia", "stadium": "Hard Rock Stadium", "city": "Miami", "country": "USA", "capacity": 65000, "role": "Tercer puesto" },
+    { "id": "sea", "stadium": "Lumen Field", "city": "Seattle", "country": "USA", "capacity": 69000, "role": "Grupos / Octavos" },
+    { "id": "phi", "stadium": "Lincoln Financial Field", "city": "Filadelfia", "country": "USA", "capacity": 69000, "role": "Grupos / Octavos" },
+    { "id": "bos", "stadium": "Gillette Stadium", "city": "Boston", "country": "USA", "capacity": 65000, "role": "Cuartos" },
+    { "id": "van", "stadium": "BC Place", "city": "Vancouver", "country": "CAN", "capacity": 54500, "role": "Grupos / Octavos" },
+    { "id": "tor", "stadium": "BMO Field", "city": "Toronto", "country": "CAN", "capacity": 45000, "role": "Grupos / Dieciseisavos" },
+    { "id": "cdmx", "stadium": "Estadio Azteca", "city": "Ciudad de México", "country": "MEX", "capacity": 83000, "role": "Inauguración" },
+    { "id": "mty", "stadium": "Estadio BBVA", "city": "Monterrey", "country": "MEX", "capacity": 53500, "role": "Grupos / Dieciseisavos" },
+    { "id": "gdl", "stadium": "Estadio Akron", "city": "Guadalajara", "country": "MEX", "capacity": 48000, "role": "Grupos / Dieciseisavos" }
+  ]
+}

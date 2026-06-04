@@ -7,7 +7,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from .data_loader import build_team_index, load_squads, load_tournament, strength_index
+from .data_loader import build_team_index, load_squads, load_tournament, load_venues, strength_index
 from .engine.probability import predict_match
 from .simulator import TournamentSimulator
 
@@ -47,6 +47,11 @@ class MatchRequest(BaseModel):
 @app.get("/api/health")
 def health():
     return {"status": "ok"}
+
+
+@app.get("/api/venues")
+def get_venues():
+    return load_venues()
 
 
 @app.get("/api/teams", response_model=List[Team])
@@ -100,6 +105,8 @@ def get_fixtures(matchday: Optional[str] = None, with_prediction: bool = True):
     fixtures = data.get("fixtures", {})
     days = [matchday] if matchday else sorted(fixtures.keys())
 
+    venues = {v["id"]: v for v in load_venues()}
+
     out = {}
     for d in days:
         matches = []
@@ -112,6 +119,15 @@ def get_fixtures(matchday: Optional[str] = None, with_prediction: bool = True):
                 "home": {"id": h, "name": idx.get(h, {}).get("name", h)},
                 "away": {"id": a, "name": idx.get(a, {}).get("name", a)},
             }
+            vid = m.get("venue_id")
+            if vid and vid in venues:
+                v = venues[vid]
+                entry["venue"] = {
+                    "id": vid,
+                    "stadium": v["stadium"],
+                    "city": v["city"],
+                    "country": v["country"],
+                }
             if with_prediction and h in strengths and a in strengths:
                 p = predict_match(strengths[h], strengths[a], neutral=True)
                 entry["prediction"] = {

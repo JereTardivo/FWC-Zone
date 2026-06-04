@@ -9,6 +9,7 @@ async function getJSON(url) {
 export const api = {
   teams: () => getJSON(`${BASE}/teams`),
   tournament: () => getJSON(`${BASE}/tournament`),
+  venues: () => getJSON(`${BASE}/venues`),
   team: (id) => getJSON(`${BASE}/team/${id}`),
   fixtures: () => getJSON(`${BASE}/fixtures`),
   simulate: (iterations = 5000) => getJSON(`${BASE}/simulate?iterations=${iterations}`),

@@ -74,6 +74,11 @@ export default function MatchModal({ match, onClose }) {
               </>
             )}
           </span>
+          {match.venue && (
+            <span className="flex items-center gap-1">
+              · <MapPin size={12} /> {match.venue.stadium}, {match.venue.city}
+            </span>
+          )}
         </div>
 
         {error && (

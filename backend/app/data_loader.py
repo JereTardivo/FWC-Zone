@@ -28,6 +28,14 @@ def load_squads() -> dict:
         return json.load(f)
 
 
+def load_venues() -> List[dict]:
+    path = DATA_DIR / "venues.json"
+    if not path.exists():
+        return []
+    with open(path, encoding="utf-8") as f:
+        return json.load(f).get("venues", [])
+
+
 def build_team_index() -> Dict[str, dict]:
     return {t["id"]: t for t in load_raw_teams()}
 
