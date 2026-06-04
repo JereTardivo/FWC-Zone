@@ -25,21 +25,13 @@ export default function App() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <header className="flex items-center justify-between gap-3 mb-2 flex-wrap">
-        <div className="flex items-center gap-3">
+        <a href="/" className="flex items-center" title="Tactiqo — Mundial 2026">
           <img
             src="/logo.png"
             alt="Tactiqo"
-            className="w-10 h-10 rounded-xl object-contain"
+            className="h-12 md:h-14 object-contain"
           />
-          <div>
-            <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-              Tact<span className="text-accent">iq</span>o
-            </h1>
-            <p className="text-sm text-slate-400">
-              Motor estadístico: Elo + Poisson + simulación Monte Carlo
-            </p>
-          </div>
-        </div>
+        </a>
         <TimezoneSelector selected={timezone.selected} onChange={timezone.setSelected} />
       </header>
 
