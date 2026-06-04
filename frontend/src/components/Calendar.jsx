@@ -87,8 +87,8 @@ export default function Calendar({ timezone }) {
 
 function MatchRow({ m, convertTime }) {
   const [expanded, setExpanded] = useState(false);
-  const p = m.prediction;
   const displayTime = convertTime ? convertTime(m.time, m.utc_offset) : m.time;
+  const p = m.prediction;
   const segs = p
     ? [
         { v: p.prob_home, color: "bg-accent" },
@@ -99,66 +99,39 @@ function MatchRow({ m, convertTime }) {
 
   return (
     <div className={`card flex flex-col transition ${expanded ? "ring-1 ring-accent/30" : "hover:bg-white/5 hover:ring-1 hover:ring-accent/20"}`}>
-      {/* Fila principal */}
+      {/* Fila principal — solo datos del partido */}
       <div
         onClick={() => setExpanded((v) => !v)}
-        className="p-3 flex flex-col gap-2 cursor-pointer"
+        className="p-3 flex items-center gap-3 cursor-pointer"
       >
-        <div className="flex items-center gap-3">
-          <span className="text-xs text-slate-500 w-12 tabular-nums">{displayTime}</span>
-          <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-slate-300">
-            Grupo {m.group}
+        <span className="text-xs text-slate-500 w-12 tabular-nums shrink-0">{displayTime}</span>
+        <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-slate-300 shrink-0">
+          Grupo {m.group}
+        </span>
+        {m.venue && (
+          <span className="text-[10px] text-slate-500 flex items-center gap-0.5 truncate shrink-0">
+            <MapPin size={10} />
+            {m.venue.city}
           </span>
-          {m.venue && (
-            <span className="text-[10px] text-slate-500 flex items-center gap-0.5 truncate">
-              <MapPin size={10} />
-              {m.venue.city}
-            </span>
-          )}
-          <span className="flex-1 flex items-center justify-end gap-2 min-w-0">
-            <span className="font-medium truncate">{m.home.name}</span>
-            {p && (
-              <span className="text-xs text-accent tabular-nums shrink-0">
-                ({p.expected_home_goals})
-              </span>
-            )}
-            <Flag
-              teamId={m.home.id}
-              className="w-5 h-3.5 rounded-sm shrink-0 ring-1 ring-white/10"
-            />
-          </span>
-          <span className="text-slate-500 text-sm px-1">vs</span>
-          <span className="flex-1 flex items-center justify-start gap-2 min-w-0">
-            <Flag
-              teamId={m.away.id}
-              className="w-5 h-3.5 rounded-sm shrink-0 ring-1 ring-white/10"
-            />
-            {p && (
-              <span className="text-xs text-blue-300 tabular-nums shrink-0">
-                ({p.expected_away_goals})
-              </span>
-            )}
-            <span className="font-medium truncate">{m.away.name}</span>
-          </span>
-          {p && (
-            <span className="text-slate-500 shrink-0">
-              {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-            </span>
-          )}
-        </div>
-        {p && (
-          <div className="flex items-center gap-3">
-            <div className="flex-1 flex h-2 rounded-full overflow-hidden">
-              {segs.map((s, i) => (
-                <div key={i} className={s.color} style={{ width: `${s.v * 100}%` }} />
-              ))}
-            </div>
-            <span className="text-xs text-slate-400 tabular-nums w-40 text-right">
-              {(p.prob_home * 100).toFixed(0)}% / {(p.prob_draw * 100).toFixed(0)}% /{" "}
-              {(p.prob_away * 100).toFixed(0)}%
-            </span>
-          </div>
         )}
+        <span className="flex-1 flex items-center justify-end gap-2 min-w-0">
+          <span className="font-medium truncate">{m.home.name}</span>
+          <Flag
+            teamId={m.home.id}
+            className="w-5 h-3.5 rounded-sm shrink-0 ring-1 ring-white/10"
+          />
+        </span>
+        <span className="text-slate-500 text-sm px-1 shrink-0">vs</span>
+        <span className="flex-1 flex items-center justify-start gap-2 min-w-0">
+          <Flag
+            teamId={m.away.id}
+            className="w-5 h-3.5 rounded-sm shrink-0 ring-1 ring-white/10"
+          />
+          <span className="font-medium truncate">{m.away.name}</span>
+        </span>
+        <span className="text-slate-500 shrink-0">
+          {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+        </span>
       </div>
 
       {/* Panel expandido inline */}
