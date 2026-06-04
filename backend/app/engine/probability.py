@@ -27,6 +27,8 @@ HOME_ADVANTAGE_ELO = 65.0    # bonus de Elo por jugar de local (0 en sede neutra
 LEAGUE_AVG_DEFENSE = 1.05    # defensa "promedio" de referencia
 ELO_GOAL_SENSITIVITY = 0.0018  # cuanto desplaza la dif. de Elo a los goles esperados
 MAX_GOALS = 10               # tope para la grilla de marcadores
+DIXON_COLES_RHO = -0.06      # correlacion negativa entre goles local/visita
+                             # (-0.06 es estandar en futbol segun Dixon & Coles 1997)
 
 
 @dataclass
@@ -93,11 +95,57 @@ def expected_goals(
     return lam_home, lam_away
 
 
-def score_matrix(lam_home: float, lam_away: float, max_goals: int = MAX_GOALS) -> List[List[float]]:
-    """Matriz de probabilidad de marcadores (independencia de Poisson)."""
+def _tau(lam_home: float, lam_away: float, rho: float, i: int, j: int) -> float:
+    """Factor de dependencia Dixon-Coles.
+
+    Ajusta la probabilidad de marcadores bajos para capturar la correlacion
+    negativa entre goles local y visita (cuando un equipo marca mucho,
+    el otro tiende a marcar menos).
+
+    tau = 1 - lam_home*lam_away*rho  si (0,0)
+    tau = 1 + lam_home*rho           si (0,1)
+    tau = 1 + lam_away*rho           si (1,0)
+    tau = 1 - rho                    si (1,1)
+    tau = 1                          en cualquier otro caso
+    """
+    if i == 0 and j == 0:
+        return 1.0 - lam_home * lam_away * rho
+    elif i == 0 and j == 1:
+        return 1.0 + lam_home * rho
+    elif i == 1 and j == 0:
+        return 1.0 + lam_away * rho
+    elif i == 1 and j == 1:
+        return 1.0 - rho
+    return 1.0
+
+
+def score_matrix(
+    lam_home: float,
+    lam_away: float,
+    max_goals: int = MAX_GOALS,
+    rho: float = DIXON_COLES_RHO,
+) -> List[List[float]]:
+    """Matriz de probabilidad de marcadores con ajuste Dixon-Coles.
+
+    Si rho != 0, aplica el factor tau(i,j) para corregir la correlacion
+    entre goles local y visita en marcadores bajos.
+    """
     home_p = [_poisson_pmf(i, lam_home) for i in range(max_goals + 1)]
     away_p = [_poisson_pmf(j, lam_away) for j in range(max_goals + 1)]
-    return [[home_p[i] * away_p[j] for j in range(max_goals + 1)] for i in range(max_goals + 1)]
+
+    raw = [
+        [
+            home_p[i] * away_p[j] * _tau(lam_home, lam_away, rho, i, j)
+            for j in range(max_goals + 1)
+        ]
+        for i in range(max_goals + 1)
+    ]
+
+    # normalizar para que la matriz sume exactamente 1
+    total = sum(sum(row) for row in raw)
+    if total > 0:
+        return [[cell / total for cell in row] for row in raw]
+    return raw
 
 
 @dataclass

@@ -87,10 +87,10 @@ Monte Carlo muestrea goles partido a partido a lo largo de todo el cuadro.
 
 - [x] Cargar ratings reales (FIFA/Elo) y actualizar tras cada fecha.
 - [x] Factores externos: forma reciente (últimos 5 partidos), valor de mercado del plantel, sedes con altitud/clima y zonas horarias.
+- [x] Modelo Poisson bivariado con correlación (Dixon-Coles) para marcadores bajos.
 
 ### 🔄 Pendiente
 
-- [ ] Modelo Poisson bivariado con correlación (Dixon-Coles) para marcadores bajos.
 - [ ] Calibración con históricos de Mundiales (backtesting + Brier score).
 - [ ] Persistencia (SQLite/Postgres) y actualización de resultados en vivo.
 - [ ] Modelo ML (gradient boosting) sobre features de equipos como alternativa al Elo.
