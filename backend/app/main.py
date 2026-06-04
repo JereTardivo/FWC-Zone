@@ -159,7 +159,9 @@ def get_fixtures(matchday: Optional[str] = None, with_prediction: bool = True):
                     "prob_away": p.prob_away,
                     "expected_home_goals": p.expected_home_goals,
                     "expected_away_goals": p.expected_away_goals,
-                    "top_score": p.top_scorelines[0] if p.top_scorelines else None,
+                    "over_2_5": p.over_2_5,
+                    "btts": p.btts,
+                    "top_scorelines": p.top_scorelines,
                 }
             matches.append(entry)
         out[d] = matches
