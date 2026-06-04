@@ -2,6 +2,13 @@ import { useEffect, useState } from "react";
 import { api } from "../api.js";
 import { Loader2, MapPin, Users } from "lucide-react";
 import Flag from "./Flag.jsx";
+import StadiumMap from "./StadiumMap.jsx";
+
+const LEGEND = [
+  { country: "USA", color: "bg-blue-500", name: "Estados Unidos" },
+  { country: "CAN", color: "bg-red-500", name: "Canadá" },
+  { country: "MEX", color: "bg-green-500", name: "México" },
+];
 
 const COUNTRY_NAMES = {
   USA: "Estados Unidos",
@@ -50,6 +57,18 @@ export default function Venues() {
 
   return (
     <div className="space-y-6">
+      <StadiumMap venues={venues} />
+      <div className="flex items-center gap-4 text-xs text-slate-300">
+        <span className="text-slate-400">Leyenda:</span>
+        {LEGEND.map((l) => (
+          <span key={l.country} className="flex items-center gap-1.5">
+            <span className={`w-3 h-3 rounded-full ${l.color}`} />
+            {l.name}
+          </span>
+        ))}
+        <span className="text-slate-500 ml-2">(radio proporcional a la capacidad)</span>
+      </div>
+
       {countries.map((code) => {
         const list = byCountry[code] || [];
         if (list.length === 0) return null;

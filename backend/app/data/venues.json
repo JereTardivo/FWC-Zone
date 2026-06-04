@@ -4,21 +4,21 @@
     "source": "https://es.wikipedia.org/wiki/Copa_Mundial_de_Futbol_de_2026"
   },
   "venues": [
-    { "id": "nyc", "stadium": "MetLife Stadium", "city": "Nueva York / Nueva Jersey", "country": "USA", "capacity": 82500, "role": "Final" },
-    { "id": "dal", "stadium": "AT&T Stadium", "city": "Dallas", "country": "USA", "capacity": 80000, "role": "Semifinal" },
-    { "id": "atl", "stadium": "Mercedes-Benz Stadium", "city": "Atlanta", "country": "USA", "capacity": 71000, "role": "Semifinal" },
-    { "id": "kc", "stadium": "Arrowhead Stadium", "city": "Kansas City", "country": "USA", "capacity": 76000, "role": "Cuartos" },
-    { "id": "hou", "stadium": "NRG Stadium", "city": "Houston", "country": "USA", "capacity": 72000, "role": "Cuartos" },
-    { "id": "la", "stadium": "SoFi Stadium", "city": "Los Ángeles", "country": "USA", "capacity": 70000, "role": "Cuartos" },
-    { "id": "sf", "stadium": "Levi's Stadium", "city": "San Francisco", "country": "USA", "capacity": 70000, "role": "Grupos / Octavos" },
-    { "id": "mia", "stadium": "Hard Rock Stadium", "city": "Miami", "country": "USA", "capacity": 65000, "role": "Tercer puesto" },
-    { "id": "sea", "stadium": "Lumen Field", "city": "Seattle", "country": "USA", "capacity": 69000, "role": "Grupos / Octavos" },
-    { "id": "phi", "stadium": "Lincoln Financial Field", "city": "Filadelfia", "country": "USA", "capacity": 69000, "role": "Grupos / Octavos" },
-    { "id": "bos", "stadium": "Gillette Stadium", "city": "Boston", "country": "USA", "capacity": 65000, "role": "Cuartos" },
-    { "id": "van", "stadium": "BC Place", "city": "Vancouver", "country": "CAN", "capacity": 54500, "role": "Grupos / Octavos" },
-    { "id": "tor", "stadium": "BMO Field", "city": "Toronto", "country": "CAN", "capacity": 45000, "role": "Grupos / Dieciseisavos" },
-    { "id": "cdmx", "stadium": "Estadio Azteca", "city": "Ciudad de México", "country": "MEX", "capacity": 83000, "role": "Inauguración" },
-    { "id": "mty", "stadium": "Estadio BBVA", "city": "Monterrey", "country": "MEX", "capacity": 53500, "role": "Grupos / Dieciseisavos" },
-    { "id": "gdl", "stadium": "Estadio Akron", "city": "Guadalajara", "country": "MEX", "capacity": 48000, "role": "Grupos / Dieciseisavos" }
+    { "id": "nyc", "stadium": "MetLife Stadium", "city": "Nueva York / Nueva Jersey", "country": "USA", "capacity": 82500, "role": "Final", "lat": 40.8288, "lng": -74.0776 },
+    { "id": "dal", "stadium": "AT&T Stadium", "city": "Dallas", "country": "USA", "capacity": 80000, "role": "Semifinal", "lat": 32.7473, "lng": -97.0945 },
+    { "id": "atl", "stadium": "Mercedes-Benz Stadium", "city": "Atlanta", "country": "USA", "capacity": 71000, "role": "Semifinal", "lat": 33.7553, "lng": -84.4006 },
+    { "id": "kc", "stadium": "Arrowhead Stadium", "city": "Kansas City", "country": "USA", "capacity": 76000, "role": "Cuartos", "lat": 39.0489, "lng": -94.4839 },
+    { "id": "hou", "stadium": "NRG Stadium", "city": "Houston", "country": "USA", "capacity": 72000, "role": "Cuartos", "lat": 29.6847, "lng": -95.4107 },
+    { "id": "la", "stadium": "SoFi Stadium", "city": "Los Ángeles", "country": "USA", "capacity": 70000, "role": "Cuartos", "lat": 33.9534, "lng": -118.3390 },
+    { "id": "sf", "stadium": "Levi's Stadium", "city": "San Francisco", "country": "USA", "capacity": 70000, "role": "Grupos / Octavos", "lat": 37.4030, "lng": -121.9701 },
+    { "id": "mia", "stadium": "Hard Rock Stadium", "city": "Miami", "country": "USA", "capacity": 65000, "role": "Tercer puesto", "lat": 25.9580, "lng": -80.2389 },
+    { "id": "sea", "stadium": "Lumen Field", "city": "Seattle", "country": "USA", "capacity": 69000, "role": "Grupos / Octavos", "lat": 47.5952, "lng": -122.3317 },
+    { "id": "phi", "stadium": "Lincoln Financial Field", "city": "Filadelfia", "country": "USA", "capacity": 69000, "role": "Grupos / Octavos", "lat": 39.9008, "lng": -75.1674 },
+    { "id": "bos", "stadium": "Gillette Stadium", "city": "Boston", "country": "USA", "capacity": 65000, "role": "Cuartos", "lat": 42.0909, "lng": -71.2643 },
+    { "id": "van", "stadium": "BC Place", "city": "Vancouver", "country": "CAN", "capacity": 54500, "role": "Grupos / Octavos", "lat": 49.2768, "lng": -123.1120 },
+    { "id": "tor", "stadium": "BMO Field", "city": "Toronto", "country": "CAN", "capacity": 45000, "role": "Grupos / Dieciseisavos", "lat": 43.6332, "lng": -79.4186 },
+    { "id": "cdmx", "stadium": "Estadio Azteca", "city": "Ciudad de México", "country": "MEX", "capacity": 83000, "role": "Inauguración", "lat": 19.3029, "lng": -99.1505 },
+    { "id": "mty", "stadium": "Estadio BBVA", "city": "Monterrey", "country": "MEX", "capacity": 53500, "role": "Grupos / Dieciseisavos", "lat": 25.6692, "lng": -100.2444 },
+    { "id": "gdl", "stadium": "Estadio Akron", "city": "Guadalajara", "country": "MEX", "capacity": 48000, "role": "Grupos / Dieciseisavos", "lat": 20.6818, "lng": -103.4626 }
   ]
 }
