@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react";
 import { api } from "../api.js";
 import Flag from "./Flag.jsx";
-import { Loader2, X, MapPin, Home } from "lucide-react";
+import { Loader2, X, MapPin, Home, Clock } from "lucide-react";
 
 // Anfitriones del Mundial 2026: solo ellos juegan con ventaja de localía.
 const HOSTS = ["MEX", "USA", "CAN"];
 
-export default function MatchModal({ match, onClose }) {
+export default function MatchModal({ match, onClose, timezone }) {
   const [pred, setPred] = useState(null);
   const [error, setError] = useState(null);
 
   // Localía solo si el local del fixture es anfitrión (México, EE.UU. o Canadá).
   const homeIsHost = HOSTS.includes(match.home.id);
   const neutral = !homeIsHost;
+
+  const displayTime = timezone?.convertTime
+    ? timezone.convertTime(match.time, match.utc_offset)
+    : match.time;
 
   useEffect(() => {
     setPred(null);
@@ -58,9 +62,16 @@ export default function MatchModal({ match, onClose }) {
             <Flag teamId={match.away.id} className="w-7 h-5 rounded-sm ring-1 ring-white/10" />
           </div>
         </div>
-        <div className="flex items-center justify-center gap-2 text-xs text-slate-400 mb-5">
+        <div className="flex items-center justify-center gap-2 text-xs text-slate-400 mb-5 flex-wrap">
           {match.group && <span>Grupo {match.group}</span>}
-          {match.time && <span>· {match.time}</span>}
+          {displayTime && (
+            <span className="flex items-center gap-1">
+              · <Clock size={12} /> {displayTime}
+              {timezone?.selected?.offset !== null && (
+                <span className="text-[10px] text-slate-500">({timezone.selected.label.split(" (")[0]})</span>
+              )}
+            </span>
+          )}
           <span className="flex items-center gap-1">
             ·
             {neutral ? (

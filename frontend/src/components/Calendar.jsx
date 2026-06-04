@@ -13,7 +13,7 @@ function fmtDate(iso) {
   ).padStart(2, "0")}`;
 }
 
-export default function Calendar() {
+export default function Calendar({ timezone }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [active, setActive] = useState("1");
@@ -76,7 +76,7 @@ export default function Calendar() {
               <h3 className="text-sm font-semibold text-accent mb-2">{fmtDate(date)}</h3>
               <div className="grid gap-2">
                 {ms.map((m, i) => (
-                  <MatchRow key={i} m={m} onClick={() => setSelected(m)} />
+                  <MatchRow key={i} m={m} onClick={() => setSelected(m)} convertTime={timezone.convertTime} />
                 ))}
               </div>
             </div>
@@ -85,14 +85,15 @@ export default function Calendar() {
       )}
 
       {selected && (
-        <MatchModal match={selected} onClose={() => setSelected(null)} />
+        <MatchModal match={selected} onClose={() => setSelected(null)} timezone={timezone} />
       )}
     </div>
   );
 }
 
-function MatchRow({ m, onClick }) {
+function MatchRow({ m, onClick, convertTime }) {
   const p = m.prediction;
+  const displayTime = convertTime ? convertTime(m.time, m.utc_offset) : m.time;
   const segs = p
     ? [
         { v: p.prob_home, color: "bg-accent" },
@@ -107,7 +108,7 @@ function MatchRow({ m, onClick }) {
       className="card p-3 flex flex-col gap-2 cursor-pointer hover:bg-white/5 hover:ring-1 hover:ring-accent/30 transition"
     >
       <div className="flex items-center gap-3">
-        <span className="text-xs text-slate-500 w-12 tabular-nums">{m.time}</span>
+        <span className="text-xs text-slate-500 w-12 tabular-nums">{displayTime}</span>
         <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-slate-300">
           Grupo {m.group}
         </span>

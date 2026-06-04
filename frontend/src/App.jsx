@@ -6,6 +6,8 @@ import Calendar from "./components/Calendar.jsx";
 import Bracket from "./components/Bracket.jsx";
 import Venues from "./components/Venues.jsx";
 import TeamDetail from "./components/TeamDetail.jsx";
+import TimezoneSelector from "./components/TimezoneSelector.jsx";
+import { useTimezone } from "./hooks/useTimezone.js";
 
 const TABS = [
   { id: "groups", label: "Grupos", icon: Grid3x3 },
@@ -18,21 +20,25 @@ const TABS = [
 export default function App() {
   const [tab, setTab] = useState("groups");
   const [selectedTeam, setSelectedTeam] = useState(null);
+  const timezone = useTimezone();
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <header className="flex items-center gap-3 mb-2">
-        <div className="p-2 rounded-xl bg-accent/15 text-accent glow">
-          <Trophy size={28} />
+      <header className="flex items-center justify-between gap-3 mb-2 flex-wrap">
+        <div className="flex items-center gap-3">
+          <div className="p-2 rounded-xl bg-accent/15 text-accent glow">
+            <Trophy size={28} />
+          </div>
+          <div>
+            <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
+              Predictor <span className="text-accent">Mundial 2026</span>
+            </h1>
+            <p className="text-sm text-slate-400">
+              Motor estadístico: Elo + Poisson + simulación Monte Carlo
+            </p>
+          </div>
         </div>
-        <div>
-          <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-            Predictor <span className="text-accent">Mundial 2026</span>
-          </h1>
-          <p className="text-sm text-slate-400">
-            Motor estadístico: Elo + Poisson + simulación Monte Carlo
-          </p>
-        </div>
+        <TimezoneSelector selected={timezone.selected} onChange={timezone.setSelected} />
       </header>
 
       <nav className="flex flex-wrap gap-2 my-6">
@@ -58,7 +64,7 @@ export default function App() {
         ) : (
           <>
             {tab === "groups" && <Groups onSelectTeam={setSelectedTeam} />}
-            {tab === "calendar" && <Calendar />}
+            {tab === "calendar" && <Calendar timezone={timezone} />}
             {tab === "bracket" && <Bracket />}
             {tab === "venues" && <Venues />}
             {tab === "simulate" && <Simulation />}

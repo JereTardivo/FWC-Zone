@@ -116,6 +116,7 @@ def get_fixtures(matchday: Optional[str] = None, with_prediction: bool = True):
                 "group": m.get("group"),
                 "date": m.get("date"),
                 "time": m.get("time"),
+                "utc_offset": m.get("utc_offset"),
                 "home": {"id": h, "name": idx.get(h, {}).get("name", h)},
                 "away": {"id": a, "name": idx.get(a, {}).get("name", a)},
             }

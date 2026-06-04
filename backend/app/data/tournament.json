@@ -94,7 +94,8 @@
         "time": "16:00",
         "home": "MEX",
         "away": "RSA",
-        "venue_id": "cdmx"
+        "venue_id": "cdmx",
+        "utc_offset": -6
       },
       {
         "group": "A",
@@ -102,7 +103,8 @@
         "time": "23:00",
         "home": "KOR",
         "away": "CZE",
-        "venue_id": "dal"
+        "venue_id": "gdl",
+        "utc_offset": -6
       },
       {
         "group": "B",
@@ -110,7 +112,8 @@
         "time": "16:00",
         "home": "CAN",
         "away": "BIH",
-        "venue_id": "van"
+        "venue_id": "tor",
+        "utc_offset": -4
       },
       {
         "group": "D",
@@ -118,7 +121,8 @@
         "time": "22:00",
         "home": "USA",
         "away": "PAR",
-        "venue_id": "kc"
+        "venue_id": "la",
+        "utc_offset": -7
       },
       {
         "group": "B",
@@ -126,7 +130,8 @@
         "time": "16:00",
         "home": "QAT",
         "away": "SUI",
-        "venue_id": "kc"
+        "venue_id": "sf",
+        "utc_offset": -7
       },
       {
         "group": "C",
@@ -134,7 +139,8 @@
         "time": "19:00",
         "home": "BRA",
         "away": "MAR",
-        "venue_id": "hou"
+        "venue_id": "nyc",
+        "utc_offset": -4
       },
       {
         "group": "C",
@@ -142,7 +148,8 @@
         "time": "22:00",
         "home": "HAI",
         "away": "SCO",
-        "venue_id": "nyc"
+        "venue_id": "bos",
+        "utc_offset": -4
       },
       {
         "group": "D",
@@ -150,7 +157,8 @@
         "time": "01:00",
         "home": "AUS",
         "away": "TUR",
-        "venue_id": "dal"
+        "venue_id": "van",
+        "utc_offset": -7
       },
       {
         "group": "E",
@@ -158,7 +166,8 @@
         "time": "14:00",
         "home": "GER",
         "away": "CUW",
-        "venue_id": "atl"
+        "venue_id": "hou",
+        "utc_offset": -5
       },
       {
         "group": "F",
@@ -166,7 +175,8 @@
         "time": "17:00",
         "home": "NED",
         "away": "JPN",
-        "venue_id": "kc"
+        "venue_id": "dal",
+        "utc_offset": -5
       },
       {
         "group": "E",
@@ -174,7 +184,8 @@
         "time": "20:00",
         "home": "CIV",
         "away": "ECU",
-        "venue_id": "hou"
+        "venue_id": "phi",
+        "utc_offset": -4
       },
       {
         "group": "F",
@@ -182,7 +193,8 @@
         "time": "23:00",
         "home": "SWE",
         "away": "TUN",
-        "venue_id": "la"
+        "venue_id": "kc",
+        "utc_offset": -5
       },
       {
         "group": "H",
@@ -190,7 +202,8 @@
         "time": "13:00",
         "home": "ESP",
         "away": "CPV",
-        "venue_id": "sf"
+        "venue_id": "atl",
+        "utc_offset": -4
       },
       {
         "group": "G",
@@ -198,7 +211,8 @@
         "time": "16:00",
         "home": "BEL",
         "away": "EGY",
-        "venue_id": "mia"
+        "venue_id": "la",
+        "utc_offset": -7
       },
       {
         "group": "H",
@@ -206,7 +220,8 @@
         "time": "19:00",
         "home": "SAU",
         "away": "URU",
-        "venue_id": "sea"
+        "venue_id": "mia",
+        "utc_offset": -4
       },
       {
         "group": "G",
@@ -214,7 +229,8 @@
         "time": "22:00",
         "home": "IRN",
         "away": "NZL",
-        "venue_id": "phi"
+        "venue_id": "sea",
+        "utc_offset": -7
       },
       {
         "group": "I",
@@ -222,7 +238,8 @@
         "time": "16:00",
         "home": "FRA",
         "away": "SEN",
-        "venue_id": "bos"
+        "venue_id": "nyc",
+        "utc_offset": -4
       },
       {
         "group": "I",
@@ -230,7 +247,8 @@
         "time": "19:00",
         "home": "IRQ",
         "away": "NOR",
-        "venue_id": "van"
+        "venue_id": "bos",
+        "utc_offset": -4
       },
       {
         "group": "J",
@@ -238,7 +256,8 @@
         "time": "22:00",
         "home": "ARG",
         "away": "ALG",
-        "venue_id": "tor"
+        "venue_id": "kc",
+        "utc_offset": -5
       },
       {
         "group": "J",
@@ -246,7 +265,8 @@
         "time": "01:00",
         "home": "AUT",
         "away": "JOR",
-        "venue_id": "cdmx"
+        "venue_id": "sf",
+        "utc_offset": -7
       },
       {
         "group": "K",
@@ -254,7 +274,8 @@
         "time": "14:00",
         "home": "POR",
         "away": "COD",
-        "venue_id": "mty"
+        "venue_id": "hou",
+        "utc_offset": -5
       },
       {
         "group": "L",
@@ -262,7 +283,8 @@
         "time": "17:00",
         "home": "ENG",
         "away": "CRO",
-        "venue_id": "gdl"
+        "venue_id": "dal",
+        "utc_offset": -5
       },
       {
         "group": "L",
@@ -270,7 +292,8 @@
         "time": "20:00",
         "home": "GHA",
         "away": "PAN",
-        "venue_id": "nyc"
+        "venue_id": "tor",
+        "utc_offset": -4
       },
       {
         "group": "K",
@@ -278,7 +301,8 @@
         "time": "23:00",
         "home": "UZB",
         "away": "COL",
-        "venue_id": "dal"
+        "venue_id": "cdmx",
+        "utc_offset": -6
       }
     ],
     "2": [
@@ -288,7 +312,8 @@
         "time": "13:00",
         "home": "CZE",
         "away": "RSA",
-        "venue_id": "atl"
+        "venue_id": "atl",
+        "utc_offset": -4
       },
       {
         "group": "B",
@@ -296,7 +321,8 @@
         "time": "16:00",
         "home": "SUI",
         "away": "BIH",
-        "venue_id": "la"
+        "venue_id": "la",
+        "utc_offset": -7
       },
       {
         "group": "B",
@@ -304,7 +330,8 @@
         "time": "19:00",
         "home": "CAN",
         "away": "QAT",
-        "venue_id": "van"
+        "venue_id": "van",
+        "utc_offset": -7
       },
       {
         "group": "A",
@@ -312,7 +339,8 @@
         "time": "22:00",
         "home": "MEX",
         "away": "KOR",
-        "venue_id": "cdmx"
+        "venue_id": "cdmx",
+        "utc_offset": -6
       },
       {
         "group": "D",
@@ -320,7 +348,8 @@
         "time": "16:00",
         "home": "USA",
         "away": "AUS",
-        "venue_id": "sf"
+        "venue_id": "sea",
+        "utc_offset": -7
       },
       {
         "group": "C",
@@ -328,7 +357,8 @@
         "time": "19:00",
         "home": "SCO",
         "away": "MAR",
-        "venue_id": "dal"
+        "venue_id": "mia",
+        "utc_offset": -4
       },
       {
         "group": "C",
@@ -336,7 +366,8 @@
         "time": "21:30",
         "home": "BRA",
         "away": "HAI",
-        "venue_id": "atl"
+        "venue_id": "nyc",
+        "utc_offset": -4
       },
       {
         "group": "D",
@@ -344,7 +375,8 @@
         "time": "00:00",
         "home": "TUR",
         "away": "PAR",
-        "venue_id": "kc"
+        "venue_id": "sf",
+        "utc_offset": -7
       },
       {
         "group": "F",
@@ -352,7 +384,8 @@
         "time": "14:00",
         "home": "NED",
         "away": "SWE",
-        "venue_id": "hou"
+        "venue_id": "dal",
+        "utc_offset": -5
       },
       {
         "group": "E",
@@ -360,7 +393,8 @@
         "time": "17:00",
         "home": "GER",
         "away": "CIV",
-        "venue_id": "la"
+        "venue_id": "hou",
+        "utc_offset": -5
       },
       {
         "group": "E",
@@ -368,7 +402,8 @@
         "time": "21:00",
         "home": "ECU",
         "away": "CUW",
-        "venue_id": "sf"
+        "venue_id": "phi",
+        "utc_offset": -4
       },
       {
         "group": "F",
@@ -376,7 +411,8 @@
         "time": "01:00",
         "home": "TUN",
         "away": "JPN",
-        "venue_id": "mia"
+        "venue_id": "mty",
+        "utc_offset": -6
       },
       {
         "group": "H",
@@ -384,7 +420,8 @@
         "time": "13:00",
         "home": "ESP",
         "away": "SAU",
-        "venue_id": "sea"
+        "venue_id": "atl",
+        "utc_offset": -4
       },
       {
         "group": "G",
@@ -392,7 +429,8 @@
         "time": "16:00",
         "home": "BEL",
         "away": "IRN",
-        "venue_id": "phi"
+        "venue_id": "la",
+        "utc_offset": -7
       },
       {
         "group": "H",
@@ -400,7 +438,8 @@
         "time": "19:00",
         "home": "URU",
         "away": "CPV",
-        "venue_id": "bos"
+        "venue_id": "mia",
+        "utc_offset": -4
       },
       {
         "group": "G",
@@ -408,7 +447,8 @@
         "time": "22:00",
         "home": "NZL",
         "away": "EGY",
-        "venue_id": "van"
+        "venue_id": "sea",
+        "utc_offset": -7
       },
       {
         "group": "J",
@@ -416,7 +456,8 @@
         "time": "14:00",
         "home": "ARG",
         "away": "AUT",
-        "venue_id": "tor"
+        "venue_id": "dal",
+        "utc_offset": -5
       },
       {
         "group": "I",
@@ -424,7 +465,8 @@
         "time": "18:00",
         "home": "FRA",
         "away": "IRQ",
-        "venue_id": "cdmx"
+        "venue_id": "bos",
+        "utc_offset": -4
       },
       {
         "group": "I",
@@ -432,7 +474,8 @@
         "time": "21:00",
         "home": "NOR",
         "away": "SEN",
-        "venue_id": "mty"
+        "venue_id": "nyc",
+        "utc_offset": -4
       },
       {
         "group": "J",
@@ -440,7 +483,8 @@
         "time": "00:00",
         "home": "JOR",
         "away": "ALG",
-        "venue_id": "gdl"
+        "venue_id": "sf",
+        "utc_offset": -7
       },
       {
         "group": "K",
@@ -448,7 +492,8 @@
         "time": "14:00",
         "home": "POR",
         "away": "UZB",
-        "venue_id": "nyc"
+        "venue_id": "hou",
+        "utc_offset": -5
       },
       {
         "group": "L",
@@ -456,7 +501,8 @@
         "time": "17:00",
         "home": "ENG",
         "away": "GHA",
-        "venue_id": "dal"
+        "venue_id": "tor",
+        "utc_offset": -4
       },
       {
         "group": "L",
@@ -464,7 +510,8 @@
         "time": "20:00",
         "home": "PAN",
         "away": "CRO",
-        "venue_id": "atl"
+        "venue_id": "van",
+        "utc_offset": -7
       },
       {
         "group": "K",
@@ -472,7 +519,8 @@
         "time": "23:00",
         "home": "COL",
         "away": "COD",
-        "venue_id": "la"
+        "venue_id": "gdl",
+        "utc_offset": -6
       }
     ],
     "3": [
@@ -482,7 +530,8 @@
         "time": "16:00",
         "home": "SUI",
         "away": "CAN",
-        "venue_id": "kc"
+        "venue_id": "van",
+        "utc_offset": -7
       },
       {
         "group": "B",
@@ -490,7 +539,8 @@
         "time": "16:00",
         "home": "BIH",
         "away": "QAT",
-        "venue_id": "hou"
+        "venue_id": "sea",
+        "utc_offset": -7
       },
       {
         "group": "C",
@@ -498,7 +548,8 @@
         "time": "19:00",
         "home": "SCO",
         "away": "BRA",
-        "venue_id": "nyc"
+        "venue_id": "nyc",
+        "utc_offset": -4
       },
       {
         "group": "C",
@@ -506,7 +557,8 @@
         "time": "19:00",
         "home": "MAR",
         "away": "HAI",
-        "venue_id": "dal"
+        "venue_id": "mia",
+        "utc_offset": -4
       },
       {
         "group": "A",
@@ -514,7 +566,8 @@
         "time": "22:00",
         "home": "RSA",
         "away": "KOR",
-        "venue_id": "atl"
+        "venue_id": "mty",
+        "utc_offset": -6
       },
       {
         "group": "A",
@@ -522,7 +575,8 @@
         "time": "22:00",
         "home": "CZE",
         "away": "MEX",
-        "venue_id": "kc"
+        "venue_id": "cdmx",
+        "utc_offset": -6
       },
       {
         "group": "E",
@@ -530,7 +584,8 @@
         "time": "17:00",
         "home": "ECU",
         "away": "GER",
-        "venue_id": "hou"
+        "venue_id": "tor",
+        "utc_offset": -4
       },
       {
         "group": "E",
@@ -538,7 +593,8 @@
         "time": "17:00",
         "home": "CUW",
         "away": "CIV",
-        "venue_id": "la"
+        "venue_id": "phi",
+        "utc_offset": -4
       },
       {
         "group": "F",
@@ -546,7 +602,8 @@
         "time": "20:00",
         "home": "TUN",
         "away": "NED",
-        "venue_id": "sf"
+        "venue_id": "dal",
+        "utc_offset": -5
       },
       {
         "group": "F",
@@ -554,7 +611,8 @@
         "time": "20:00",
         "home": "JPN",
         "away": "SWE",
-        "venue_id": "mia"
+        "venue_id": "hou",
+        "utc_offset": -5
       },
       {
         "group": "D",
@@ -562,7 +620,8 @@
         "time": "23:00",
         "home": "PAR",
         "away": "AUS",
-        "venue_id": "sea"
+        "venue_id": "sf",
+        "utc_offset": -7
       },
       {
         "group": "D",
@@ -570,7 +629,8 @@
         "time": "23:00",
         "home": "TUR",
         "away": "USA",
-        "venue_id": "phi"
+        "venue_id": "la",
+        "utc_offset": -7
       },
       {
         "group": "I",
@@ -578,7 +638,8 @@
         "time": "16:00",
         "home": "NOR",
         "away": "FRA",
-        "venue_id": "bos"
+        "venue_id": "bos",
+        "utc_offset": -4
       },
       {
         "group": "I",
@@ -586,7 +647,8 @@
         "time": "16:00",
         "home": "SEN",
         "away": "IRQ",
-        "venue_id": "van"
+        "venue_id": "nyc",
+        "utc_offset": -4
       },
       {
         "group": "H",
@@ -594,7 +656,8 @@
         "time": "21:00",
         "home": "URU",
         "away": "ESP",
-        "venue_id": "tor"
+        "venue_id": "gdl",
+        "utc_offset": -6
       },
       {
         "group": "H",
@@ -602,7 +665,8 @@
         "time": "21:00",
         "home": "CPV",
         "away": "SAU",
-        "venue_id": "cdmx"
+        "venue_id": "atl",
+        "utc_offset": -4
       },
       {
         "group": "G",
@@ -610,7 +674,8 @@
         "time": "00:00",
         "home": "EGY",
         "away": "IRN",
-        "venue_id": "mty"
+        "venue_id": "la",
+        "utc_offset": -7
       },
       {
         "group": "G",
@@ -618,7 +683,8 @@
         "time": "00:00",
         "home": "NZL",
         "away": "BEL",
-        "venue_id": "gdl"
+        "venue_id": "sea",
+        "utc_offset": -7
       },
       {
         "group": "L",
@@ -626,7 +692,8 @@
         "time": "18:00",
         "home": "CRO",
         "away": "GHA",
-        "venue_id": "nyc"
+        "venue_id": "tor",
+        "utc_offset": -4
       },
       {
         "group": "L",
@@ -634,7 +701,8 @@
         "time": "18:00",
         "home": "PAN",
         "away": "ENG",
-        "venue_id": "dal"
+        "venue_id": "phi",
+        "utc_offset": -4
       },
       {
         "group": "K",
@@ -642,7 +710,8 @@
         "time": "20:30",
         "home": "COL",
         "away": "POR",
-        "venue_id": "atl"
+        "venue_id": "mia",
+        "utc_offset": -4
       },
       {
         "group": "K",
@@ -650,7 +719,8 @@
         "time": "20:30",
         "home": "COD",
         "away": "UZB",
-        "venue_id": "la"
+        "venue_id": "mty",
+        "utc_offset": -6
       },
       {
         "group": "J",
@@ -658,7 +728,8 @@
         "time": "23:00",
         "home": "ALG",
         "away": "AUT",
-        "venue_id": "kc"
+        "venue_id": "kc",
+        "utc_offset": -5
       },
       {
         "group": "J",
@@ -666,7 +737,8 @@
         "time": "23:00",
         "home": "JOR",
         "away": "ARG",
-        "venue_id": "hou"
+        "venue_id": "dal",
+        "utc_offset": -5
       }
     ]
   },
@@ -680,7 +752,8 @@
         "home": "1E",
         "away": "S1",
         "label": "1°E vs 3°(A/B/C/D/F)",
-        "venue_id": "sf"
+        "venue_id": "sf",
+        "utc_offset": -7
       },
       {
         "match": 74,
@@ -689,7 +762,8 @@
         "home": "1I",
         "away": "S2",
         "label": "1°I vs 3°(C/D/F/G/H)",
-        "venue_id": "mia"
+        "venue_id": "mia",
+        "utc_offset": -4
       },
       {
         "match": 75,
@@ -698,7 +772,8 @@
         "home": "2A",
         "away": "2B",
         "label": "2°A vs 2°B",
-        "venue_id": "sea"
+        "venue_id": "sea",
+        "utc_offset": -7
       },
       {
         "match": 76,
@@ -707,7 +782,8 @@
         "home": "1F",
         "away": "2C",
         "label": "1°F vs 2°C",
-        "venue_id": "phi"
+        "venue_id": "phi",
+        "utc_offset": -4
       },
       {
         "match": 77,
@@ -716,7 +792,8 @@
         "home": "2K",
         "away": "2L",
         "label": "2°K vs 2°L",
-        "venue_id": "van"
+        "venue_id": "van",
+        "utc_offset": -7
       },
       {
         "match": 78,
@@ -725,7 +802,8 @@
         "home": "1H",
         "away": "2J",
         "label": "1°H vs 2°J",
-        "venue_id": "tor"
+        "venue_id": "tor",
+        "utc_offset": -4
       },
       {
         "match": 79,
@@ -734,7 +812,8 @@
         "home": "1D",
         "away": "S7",
         "label": "1°D vs 3°(B/E/F/I/J)",
-        "venue_id": "cdmx"
+        "venue_id": "cdmx",
+        "utc_offset": -6
       },
       {
         "match": 80,
@@ -743,7 +822,8 @@
         "home": "1G",
         "away": "S8",
         "label": "1°G vs 3°(A/E/H/I/J)",
-        "venue_id": "mty"
+        "venue_id": "mty",
+        "utc_offset": -6
       },
       {
         "match": 81,
@@ -752,7 +832,8 @@
         "home": "1C",
         "away": "2F",
         "label": "1°C vs 2°F",
-        "venue_id": "gdl"
+        "venue_id": "gdl",
+        "utc_offset": -6
       },
       {
         "match": 82,
@@ -761,7 +842,8 @@
         "home": "2E",
         "away": "2I",
         "label": "2°E vs 2°I",
-        "venue_id": "la"
+        "venue_id": "la",
+        "utc_offset": -7
       },
       {
         "match": 83,
@@ -770,7 +852,8 @@
         "home": "1A",
         "away": "S11",
         "label": "1°A vs 3°(C/E/F/H/I)",
-        "venue_id": "hou"
+        "venue_id": "hou",
+        "utc_offset": -5
       },
       {
         "match": 84,
@@ -779,7 +862,8 @@
         "home": "1L",
         "away": "S12",
         "label": "1°L vs 3°(E/H/I/J/K)",
-        "venue_id": "kc"
+        "venue_id": "kc",
+        "utc_offset": -5
       },
       {
         "match": 85,
@@ -788,7 +872,8 @@
         "home": "1J",
         "away": "2H",
         "label": "1°J vs 2°H",
-        "venue_id": "dal"
+        "venue_id": "dal",
+        "utc_offset": -5
       },
       {
         "match": 86,
@@ -797,7 +882,8 @@
         "home": "2D",
         "away": "2G",
         "label": "2°D vs 2°G",
-        "venue_id": "atl"
+        "venue_id": "atl",
+        "utc_offset": -4
       },
       {
         "match": 87,
@@ -806,7 +892,8 @@
         "home": "1B",
         "away": "S15",
         "label": "1°B vs 3°(E/F/G/I/J)",
-        "venue_id": "bos"
+        "venue_id": "bos",
+        "utc_offset": -4
       },
       {
         "match": 88,
@@ -815,7 +902,8 @@
         "home": "1K",
         "away": "S16",
         "label": "1°K vs 3°(D/E/I/J/L)",
-        "venue_id": "nyc"
+        "venue_id": "nyc",
+        "utc_offset": -4
       }
     ],
     "R16": [
@@ -826,7 +914,8 @@
         "home": "W73",
         "away": "W75",
         "label": "Ganador 73 vs Ganador 75",
-        "venue_id": "la"
+        "venue_id": "la",
+        "utc_offset": -7
       },
       {
         "match": 90,
@@ -835,7 +924,8 @@
         "home": "W74",
         "away": "W77",
         "label": "Ganador 74 vs Ganador 77",
-        "venue_id": "hou"
+        "venue_id": "hou",
+        "utc_offset": -5
       },
       {
         "match": 91,
@@ -844,7 +934,8 @@
         "home": "W76",
         "away": "W78",
         "label": "Ganador 76 vs Ganador 78",
-        "venue_id": "kc"
+        "venue_id": "kc",
+        "utc_offset": -5
       },
       {
         "match": 92,
@@ -853,7 +944,8 @@
         "home": "W79",
         "away": "W80",
         "label": "Ganador 79 vs Ganador 80",
-        "venue_id": "sf"
+        "venue_id": "sf",
+        "utc_offset": -7
       },
       {
         "match": 93,
@@ -862,7 +954,8 @@
         "home": "W81",
         "away": "W82",
         "label": "Ganador 81 vs Ganador 82",
-        "venue_id": "sea"
+        "venue_id": "sea",
+        "utc_offset": -7
       },
       {
         "match": 94,
@@ -871,7 +964,8 @@
         "home": "W83",
         "away": "W84",
         "label": "Ganador 83 vs Ganador 84",
-        "venue_id": "phi"
+        "venue_id": "phi",
+        "utc_offset": -4
       },
       {
         "match": 95,
@@ -880,7 +974,8 @@
         "home": "W85",
         "away": "W87",
         "label": "Ganador 85 vs Ganador 87",
-        "venue_id": "mia"
+        "venue_id": "mia",
+        "utc_offset": -4
       },
       {
         "match": 96,
@@ -889,7 +984,8 @@
         "home": "W86",
         "away": "W88",
         "label": "Ganador 86 vs Ganador 88",
-        "venue_id": "van"
+        "venue_id": "van",
+        "utc_offset": -7
       }
     ],
     "QF": [
@@ -900,7 +996,8 @@
         "home": "W89",
         "away": "W90",
         "label": "Ganador 89 vs Ganador 90",
-        "venue_id": "kc"
+        "venue_id": "kc",
+        "utc_offset": -5
       },
       {
         "match": 98,
@@ -909,7 +1006,8 @@
         "home": "W93",
         "away": "W94",
         "label": "Ganador 93 vs Ganador 94",
-        "venue_id": "hou"
+        "venue_id": "hou",
+        "utc_offset": -5
       },
       {
         "match": 99,
@@ -918,7 +1016,8 @@
         "home": "W91",
         "away": "W92",
         "label": "Ganador 91 vs Ganador 92",
-        "venue_id": "la"
+        "venue_id": "la",
+        "utc_offset": -7
       },
       {
         "match": 100,
@@ -927,7 +1026,8 @@
         "home": "W95",
         "away": "W96",
         "label": "Ganador 95 vs Ganador 96",
-        "venue_id": "bos"
+        "venue_id": "bos",
+        "utc_offset": -4
       }
     ],
     "SF": [
@@ -938,7 +1038,8 @@
         "home": "W97",
         "away": "W98",
         "label": "Ganador 97 vs Ganador 98",
-        "venue_id": "dal"
+        "venue_id": "dal",
+        "utc_offset": -5
       },
       {
         "match": 102,
@@ -947,7 +1048,8 @@
         "home": "W99",
         "away": "W100",
         "label": "Ganador 99 vs Ganador 100",
-        "venue_id": "atl"
+        "venue_id": "atl",
+        "utc_offset": -4
       }
     ],
     "THIRD": [
@@ -958,7 +1060,8 @@
         "home": "L101",
         "away": "L102",
         "label": "Perdedor 101 vs Perdedor 102 (3er puesto)",
-        "venue_id": "mia"
+        "venue_id": "mia",
+        "utc_offset": -4
       }
     ],
     "FINAL": [
@@ -969,7 +1072,8 @@
         "home": "W101",
         "away": "W102",
         "label": "Ganador 101 vs Ganador 102 (Final)",
-        "venue_id": "nyc"
+        "venue_id": "nyc",
+        "utc_offset": -4
       }
     ]
   }
