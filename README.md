@@ -1,4 +1,8 @@
-# Predictor Mundial 2026 ⚽
+# Tactiqo ⚽
+
+> **Tactiqo** — del inglés *tactics* + *IQ*. Inteligencia táctica aplicada al fútbol.
+>
+> Motor estadístico para estimar resultados del FIFA World Cup 2026.
 
 Web app para estimar resultados del **FIFA World Cup 2026** (48 equipos, 12 grupos)
 con un motor **estadístico y probabilístico**:
@@ -79,9 +83,14 @@ Monte Carlo muestrea goles partido a partido a lo largo de todo el cuadro.
 
 ## Próximos pasos (ideas para hacerlo "ultrapotente")
 
-- [ ] Cargar ratings reales (FIFA/Elo) y actualizar tras cada fecha.
+### ✅ Realizado
+
+- [x] Cargar ratings reales (FIFA/Elo) y actualizar tras cada fecha.
+- [x] Factores externos: forma reciente (últimos 5 partidos), valor de mercado del plantel, sedes con altitud/clima y zonas horarias.
+
+### 🔄 Pendiente
+
 - [ ] Modelo Poisson bivariado con correlación (Dixon-Coles) para marcadores bajos.
-- [ ] Factores externos: lesiones, clima/altitud por sede, descanso, viajes.
 - [ ] Calibración con históricos de Mundiales (backtesting + Brier score).
 - [ ] Persistencia (SQLite/Postgres) y actualización de resultados en vivo.
 - [ ] Modelo ML (gradient boosting) sobre features de equipos como alternativa al Elo.

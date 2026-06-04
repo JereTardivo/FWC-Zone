@@ -31,7 +31,7 @@ export default function App() {
           </div>
           <div>
             <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-              Predictor <span className="text-accent">Mundial 2026</span>
+              Tact<span className="text-accent">iq</span>o
             </h1>
             <p className="text-sm text-slate-400">
               Motor estadístico: Elo + Poisson + simulación Monte Carlo

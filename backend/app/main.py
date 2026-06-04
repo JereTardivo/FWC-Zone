@@ -1,4 +1,4 @@
-"""API FastAPI - Predictor Mundial 2026."""
+"""API FastAPI - Tactiqo Mundial 2026."""
 from __future__ import annotations
 
 from typing import List, Optional
@@ -15,7 +15,7 @@ from .engine.probability import predict_match
 from .simulator import TournamentSimulator
 
 app = FastAPI(
-    title="Predictor Mundial 2026",
+    title="Tactiqo Mundial 2026",
     description="Motor estadistico (Elo + Poisson + Monte Carlo) para estimar resultados del Mundial 2026.",
     version="0.1.0",
 )
