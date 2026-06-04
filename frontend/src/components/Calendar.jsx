@@ -104,32 +104,41 @@ function MatchRow({ m, convertTime }) {
         onClick={() => setExpanded((v) => !v)}
         className="p-3 flex items-center gap-3 cursor-pointer"
       >
-        <span className="text-xs text-slate-500 w-12 tabular-nums shrink-0">{displayTime}</span>
-        <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-slate-300 shrink-0">
-          Grupo {m.group}
-        </span>
-        {m.venue && (
-          <span className="text-[10px] text-slate-500 flex items-center gap-0.5 truncate shrink-0">
-            <MapPin size={10} />
-            {m.venue.city}
+        {/* Izquierda: info básica */}
+        <div className="flex items-center gap-2 shrink-0 w-[140px]">
+          <span className="text-xs text-slate-500 tabular-nums">{displayTime}</span>
+          <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-slate-300">
+            {m.group}
           </span>
-        )}
-        <span className="flex-1 flex items-center justify-end gap-2 min-w-0">
-          <span className="font-medium truncate">{m.home.name}</span>
-          <Flag
-            teamId={m.home.id}
-            className="w-5 h-3.5 rounded-sm shrink-0 ring-1 ring-white/10"
-          />
-        </span>
-        <span className="text-slate-500 text-sm px-1 shrink-0">vs</span>
-        <span className="flex-1 flex items-center justify-start gap-2 min-w-0">
-          <Flag
-            teamId={m.away.id}
-            className="w-5 h-3.5 rounded-sm shrink-0 ring-1 ring-white/10"
-          />
-          <span className="font-medium truncate">{m.away.name}</span>
-        </span>
-        <span className="text-slate-500 shrink-0">
+          {m.venue && (
+            <span className="text-[10px] text-slate-500 flex items-center gap-0.5 truncate">
+              <MapPin size={10} />
+              {m.venue.city}
+            </span>
+          )}
+        </div>
+
+        {/* Centro: equipos centrados */}
+        <div className="flex-1 flex items-center justify-center gap-3 min-w-0">
+          <span className="flex items-center justify-end gap-2 min-w-0">
+            <span className="font-medium truncate">{m.home.name}</span>
+            <Flag
+              teamId={m.home.id}
+              className="w-5 h-3.5 rounded-sm shrink-0 ring-1 ring-white/10"
+            />
+          </span>
+          <span className="text-slate-500 text-sm shrink-0">vs</span>
+          <span className="flex items-center justify-start gap-2 min-w-0">
+            <Flag
+              teamId={m.away.id}
+              className="w-5 h-3.5 rounded-sm shrink-0 ring-1 ring-white/10"
+            />
+            <span className="font-medium truncate">{m.away.name}</span>
+          </span>
+        </div>
+
+        {/* Derecha: chevron */}
+        <span className="text-slate-500 shrink-0 w-6 text-right">
           {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
         </span>
       </div>
