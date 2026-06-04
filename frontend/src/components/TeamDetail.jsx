@@ -11,6 +11,7 @@ import {
   Coins,
   LayoutGrid,
   List,
+  TrendingUp,
 } from "lucide-react";
 
 const POS_GROUPS = [
@@ -158,7 +159,7 @@ function Detail({ data }) {
           />
           <Stat
             label="Valor plantel"
-            value={stats.totalValue ? fmtMoney(stats.totalValue) : "—"}
+            value={data.market_value_millions ? `€${data.market_value_millions}M` : (stats.totalValue ? fmtMoney(stats.totalValue) : "—")}
           />
           <Stat
             label="Figura"
@@ -174,6 +175,13 @@ function Detail({ data }) {
             }
           />
         </div>
+
+        {/* Forma reciente */}
+        {data.recent_form && data.recent_form.last_5 && (
+          <div className="mt-4">
+            <RecentForm form={data.recent_form} />
+          </div>
+        )}
       </div>
 
       {!data.has_squad ? (
@@ -345,6 +353,42 @@ function Stat({ label, value }) {
     <div className="bg-white/5 rounded-lg px-3 py-2">
       <div className="text-xs text-slate-400">{label}</div>
       <div className="font-semibold tabular-nums">{value}</div>
+    </div>
+  );
+}
+
+function RecentForm({ form }) {
+  const results = form.last_5 || [];
+  const pts = form.points || 0;
+  const gf = form.goals_for || 0;
+  const ga = form.goals_against || 0;
+
+  const color = {
+    W: "bg-emerald-500/20 text-emerald-300",
+    D: "bg-amber-500/20 text-amber-300",
+    L: "bg-rose-500/20 text-rose-300",
+  };
+
+  return (
+    <div className="bg-white/5 rounded-lg p-3">
+      <div className="flex items-center gap-2 mb-2">
+        <TrendingUp size={14} className="text-slate-400" />
+        <span className="text-xs text-slate-400">Forma reciente (últimos 5)</span>
+        <span className="text-xs text-slate-500 ml-auto">
+          {pts} pts · {gf}-{ga}
+        </span>
+      </div>
+      <div className="flex gap-1.5">
+        {results.map((m, i) => (
+          <div
+            key={i}
+            className={`flex-1 text-center text-[10px] font-bold py-1 rounded ${color[m.result]}`}
+            title={`vs ${m.opponent_name} ${m.goals_for}-${m.goals_away} (${m.venue})`}
+          >
+            {m.result}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

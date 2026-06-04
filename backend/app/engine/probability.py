@@ -52,17 +52,40 @@ def expected_goals(
     home: TeamStrength,
     away: TeamStrength,
     neutral: bool = True,
+    home_form: float = 0.0,
+    away_form: float = 0.0,
+    home_market: float = 1.0,
+    away_market: float = 1.0,
 ) -> tuple[float, float]:
-    """Calcula los goles esperados (lambda) de cada equipo."""
+    """Calcula los goles esperados (lambda) de cada equipo.
+
+    home_form / away_form: ajuste al Elo según forma reciente (puntos de ultimos 5 partidos).
+    home_market / away_market: ratio de valor de mercado relativo al promedio (1.0 = promedio).
+    """
     home_adv = 0.0 if neutral else HOME_ADVANTAGE_ELO
-    elo_diff = (home.elo + home_adv) - away.elo
+    # forma reciente: cada punto sobre 7.5 (promedio de 5 partidos) suma ~8 Elo
+    elo_diff = (home.elo + home_adv + home_form * 8) - (away.elo + away_form * 8)
 
     # factor multiplicativo segun diferencia de Elo (exponencial suave)
     elo_factor_home = exp(ELO_GOAL_SENSITIVITY * elo_diff)
     elo_factor_away = exp(-ELO_GOAL_SENSITIVITY * elo_diff)
 
-    lam_home = home.attack * (away.defense / LEAGUE_AVG_DEFENSE) * elo_factor_home
-    lam_away = away.attack * (home.defense / LEAGUE_AVG_DEFENSE) * elo_factor_away
+    # valor de mercado afecta ataque (jugadores mejores = mas goles)
+    market_factor_home = home_market ** 0.3
+    market_factor_away = away_market ** 0.3
+
+    lam_home = (
+        home.attack
+        * (away.defense / LEAGUE_AVG_DEFENSE)
+        * elo_factor_home
+        * market_factor_home
+    )
+    lam_away = (
+        away.attack
+        * (home.defense / LEAGUE_AVG_DEFENSE)
+        * elo_factor_away
+        * market_factor_away
+    )
 
     # limites de cordura
     lam_home = max(0.15, min(lam_home, 5.0))
@@ -94,8 +117,20 @@ class MatchPrediction:
     elo_win_prob: float  # prob de victoria via Elo puro (sin empate)
 
 
-def predict_match(home: TeamStrength, away: TeamStrength, neutral: bool = True) -> MatchPrediction:
-    lam_home, lam_away = expected_goals(home, away, neutral=neutral)
+def predict_match(
+    home: TeamStrength,
+    away: TeamStrength,
+    neutral: bool = True,
+    home_form: float = 0.0,
+    away_form: float = 0.0,
+    home_market: float = 1.0,
+    away_market: float = 1.0,
+) -> MatchPrediction:
+    lam_home, lam_away = expected_goals(
+        home, away, neutral=neutral,
+        home_form=home_form, away_form=away_form,
+        home_market=home_market, away_market=away_market,
+    )
     matrix = score_matrix(lam_home, lam_away)
 
     p_home = p_draw = p_away = over = btts = 0.0
@@ -120,7 +155,10 @@ def predict_match(home: TeamStrength, away: TeamStrength, neutral: bool = True) 
         for s in scorelines[:6]
     ]
 
-    elo_e = elo_expected_score(home.elo, away.elo, 0.0 if neutral else HOME_ADVANTAGE_ELO)
+    elo_e = elo_expected_score(
+        home.elo + home_form * 8, away.elo + away_form * 8,
+        0.0 if neutral else HOME_ADVANTAGE_ELO
+    )
 
     total = p_home + p_draw + p_away
     return MatchPrediction(

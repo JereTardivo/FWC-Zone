@@ -7,7 +7,10 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from .data_loader import build_team_index, load_squads, load_tournament, load_venues, strength_index
+from .data_loader import (
+    build_team_index, load_squads, load_tournament, load_venues,
+    load_recent_form, strength_index, form_factor, squad_market_value, avg_market_value,
+)
 from .engine.probability import predict_match
 from .simulator import TournamentSimulator
 
@@ -88,13 +91,26 @@ def get_team(team_id: str):
     data = load_tournament()
     group = next((g for g, members in data["groups"].items() if team_id in members), None)
 
+    # forma reciente
+    recent = load_recent_form().get(team_id, {})
+
+    # valor de mercado
+    mv = squad_market_value(team_id)
+
     return {
         "team": raw,
         "group": group,
         "has_squad": squad is not None,
         "coach": (squad or {}).get("coach"),
         "players": (squad or {}).get("players", []),
+        "recent_form": recent,
+        "market_value_millions": round(mv, 1) if mv > 0 else None,
     }
+
+
+@app.get("/api/form")
+def get_form():
+    return load_recent_form()
 
 
 @app.get("/api/fixtures")
@@ -106,6 +122,7 @@ def get_fixtures(matchday: Optional[str] = None, with_prediction: bool = True):
     days = [matchday] if matchday else sorted(fixtures.keys())
 
     venues = {v["id"]: v for v in load_venues()}
+    avg_mv = avg_market_value()
 
     out = {}
     for d in days:
@@ -130,7 +147,12 @@ def get_fixtures(matchday: Optional[str] = None, with_prediction: bool = True):
                     "country": v["country"],
                 }
             if with_prediction and h in strengths and a in strengths:
-                p = predict_match(strengths[h], strengths[a], neutral=True)
+                p = predict_match(
+                    strengths[h], strengths[a], neutral=True,
+                    home_form=form_factor(h), away_form=form_factor(a),
+                    home_market=max(0.5, squad_market_value(h) / avg_mv) if squad_market_value(h) > 0 else 1.0,
+                    away_market=max(0.5, squad_market_value(a) / avg_mv) if squad_market_value(a) > 0 else 1.0,
+                )
                 entry["prediction"] = {
                     "prob_home": p.prob_home,
                     "prob_draw": p.prob_draw,
@@ -149,7 +171,13 @@ def predict(req: MatchRequest):
     strengths = strength_index()
     if req.home not in strengths or req.away not in strengths:
         raise HTTPException(status_code=404, detail="Equipo no encontrado")
-    pred = predict_match(strengths[req.home], strengths[req.away], neutral=req.neutral)
+    avg_mv = avg_market_value()
+    pred = predict_match(
+        strengths[req.home], strengths[req.away], neutral=req.neutral,
+        home_form=form_factor(req.home), away_form=form_factor(req.away),
+        home_market=max(0.5, squad_market_value(req.home) / avg_mv) if squad_market_value(req.home) > 0 else 1.0,
+        away_market=max(0.5, squad_market_value(req.away) / avg_mv) if squad_market_value(req.away) > 0 else 1.0,
+    )
     return pred.__dict__
 
 

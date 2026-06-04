@@ -1,0 +1,2263 @@
+{
+  "_meta": {
+    "description": "Forma reciente simulada (ultimos 5 partidos). Cada equipo tiene resultados, goles y oponentes."
+  },
+  "form": {
+    "ARG": {
+      "last_5": [
+        {
+          "opponent": "SWE",
+          "opponent_name": "Suecia",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "BEL",
+          "opponent_name": "Bélgica",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "ESP",
+          "opponent_name": "España",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "HAI",
+          "opponent_name": "Haití",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "FRA",
+          "opponent_name": "Francia",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "away"
+        }
+      ],
+      "points": 10,
+      "goals_for": 11,
+      "goals_against": 6
+    },
+    "FRA": {
+      "last_5": [
+        {
+          "opponent": "MEX",
+          "opponent_name": "México",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "EGY",
+          "opponent_name": "Egipto",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "IRN",
+          "opponent_name": "Irán",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "CIV",
+          "opponent_name": "Costa de Marfil",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "KOR",
+          "opponent_name": "Corea del Sur",
+          "result": "L",
+          "goals_for": 3,
+          "goals_against": 0,
+          "venue": "away"
+        }
+      ],
+      "points": 9,
+      "goals_for": 12,
+      "goals_against": 3
+    },
+    "ESP": {
+      "last_5": [
+        {
+          "opponent": "QAT",
+          "opponent_name": "Catar",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "AUT",
+          "opponent_name": "Austria",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "UZB",
+          "opponent_name": "Uzbekistán",
+          "result": "D",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "SWE",
+          "opponent_name": "Suecia",
+          "result": "D",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "BRA",
+          "opponent_name": "Brasil",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "away"
+        }
+      ],
+      "points": 9,
+      "goals_for": 12,
+      "goals_against": 5
+    },
+    "ENG": {
+      "last_5": [
+        {
+          "opponent": "MEX",
+          "opponent_name": "México",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "GHA",
+          "opponent_name": "Ghana",
+          "result": "W",
+          "goals_for": 4,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "JPN",
+          "opponent_name": "Japón",
+          "result": "D",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "CPV",
+          "opponent_name": "Cabo Verde",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "NED",
+          "opponent_name": "Países Bajos",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "away"
+        }
+      ],
+      "points": 7,
+      "goals_for": 11,
+      "goals_against": 6
+    },
+    "BRA": {
+      "last_5": [
+        {
+          "opponent": "BIH",
+          "opponent_name": "Bosnia y Herzegovina",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "ALG",
+          "opponent_name": "Argelia",
+          "result": "W",
+          "goals_for": 0,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "GER",
+          "opponent_name": "Alemania",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "GER",
+          "opponent_name": "Alemania",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "CUW",
+          "opponent_name": "Curazao",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "home"
+        }
+      ],
+      "points": 12,
+      "goals_for": 8,
+      "goals_against": 3
+    },
+    "POR": {
+      "last_5": [
+        {
+          "opponent": "SWE",
+          "opponent_name": "Suecia",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "COL",
+          "opponent_name": "Colombia",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "CAN",
+          "opponent_name": "Canadá",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "ECU",
+          "opponent_name": "Ecuador",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "CUW",
+          "opponent_name": "Curazao",
+          "result": "W",
+          "goals_for": 4,
+          "goals_against": 1,
+          "venue": "home"
+        }
+      ],
+      "points": 13,
+      "goals_for": 13,
+      "goals_against": 4
+    },
+    "NED": {
+      "last_5": [
+        {
+          "opponent": "CRO",
+          "opponent_name": "Croacia",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "NZL",
+          "opponent_name": "Nueva Zelanda",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "USA",
+          "opponent_name": "Estados Unidos",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "ALG",
+          "opponent_name": "Argelia",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "JOR",
+          "opponent_name": "Jordania",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "home"
+        }
+      ],
+      "points": 9,
+      "goals_for": 11,
+      "goals_against": 6
+    },
+    "BEL": {
+      "last_5": [
+        {
+          "opponent": "SUI",
+          "opponent_name": "Suiza",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "AUT",
+          "opponent_name": "Austria",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "RSA",
+          "opponent_name": "Sudáfrica",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "NED",
+          "opponent_name": "Países Bajos",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "CUW",
+          "opponent_name": "Curazao",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "away"
+        }
+      ],
+      "points": 13,
+      "goals_for": 10,
+      "goals_against": 6
+    },
+    "GER": {
+      "last_5": [
+        {
+          "opponent": "CUW",
+          "opponent_name": "Curazao",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "NOR",
+          "opponent_name": "Noruega",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "BRA",
+          "opponent_name": "Brasil",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "UZB",
+          "opponent_name": "Uzbekistán",
+          "result": "D",
+          "goals_for": 4,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "COL",
+          "opponent_name": "Colombia",
+          "result": "D",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "home"
+        }
+      ],
+      "points": 9,
+      "goals_for": 11,
+      "goals_against": 5
+    },
+    "CRO": {
+      "last_5": [
+        {
+          "opponent": "COL",
+          "opponent_name": "Colombia",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "QAT",
+          "opponent_name": "Catar",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "COD",
+          "opponent_name": "RD Congo",
+          "result": "D",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "CPV",
+          "opponent_name": "Cabo Verde",
+          "result": "D",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "SAU",
+          "opponent_name": "Arabia Saudita",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 0,
+          "venue": "home"
+        }
+      ],
+      "points": 9,
+      "goals_for": 13,
+      "goals_against": 3
+    },
+    "URU": {
+      "last_5": [
+        {
+          "opponent": "POR",
+          "opponent_name": "Portugal",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "TUN",
+          "opponent_name": "Túnez",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "CZE",
+          "opponent_name": "República Checa",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "SEN",
+          "opponent_name": "Senegal",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "COD",
+          "opponent_name": "RD Congo",
+          "result": "D",
+          "goals_for": 0,
+          "goals_against": 1,
+          "venue": "home"
+        }
+      ],
+      "points": 10,
+      "goals_for": 6,
+      "goals_against": 4
+    },
+    "COL": {
+      "last_5": [
+        {
+          "opponent": "ARG",
+          "opponent_name": "Argentina",
+          "result": "D",
+          "goals_for": 4,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "MEX",
+          "opponent_name": "México",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "JPN",
+          "opponent_name": "Japón",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "CZE",
+          "opponent_name": "República Checa",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "JOR",
+          "opponent_name": "Jordania",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "away"
+        }
+      ],
+      "points": 8,
+      "goals_for": 12,
+      "goals_against": 7
+    },
+    "MAR": {
+      "last_5": [
+        {
+          "opponent": "BEL",
+          "opponent_name": "Bélgica",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "MEX",
+          "opponent_name": "México",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "GHA",
+          "opponent_name": "Ghana",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "AUT",
+          "opponent_name": "Austria",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "URU",
+          "opponent_name": "Uruguay",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "away"
+        }
+      ],
+      "points": 6,
+      "goals_for": 10,
+      "goals_against": 5
+    },
+    "USA": {
+      "last_5": [
+        {
+          "opponent": "BRA",
+          "opponent_name": "Brasil",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "CIV",
+          "opponent_name": "Costa de Marfil",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "ESP",
+          "opponent_name": "España",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "away"
+        },
+        {
+          "opponent": "JOR",
+          "opponent_name": "Jordania",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "JPN",
+          "opponent_name": "Japón",
+          "result": "L",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "home"
+        }
+      ],
+      "points": 1,
+      "goals_for": 8,
+      "goals_against": 7
+    },
+    "MEX": {
+      "last_5": [
+        {
+          "opponent": "FRA",
+          "opponent_name": "Francia",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "COD",
+          "opponent_name": "RD Congo",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "NED",
+          "opponent_name": "Países Bajos",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "QAT",
+          "opponent_name": "Catar",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "COD",
+          "opponent_name": "RD Congo",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "home"
+        }
+      ],
+      "points": 8,
+      "goals_for": 10,
+      "goals_against": 5
+    },
+    "SUI": {
+      "last_5": [
+        {
+          "opponent": "AUT",
+          "opponent_name": "Austria",
+          "result": "W",
+          "goals_for": 0,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "AUS",
+          "opponent_name": "Australia",
+          "result": "L",
+          "goals_for": 3,
+          "goals_against": 3,
+          "venue": "away"
+        },
+        {
+          "opponent": "SEN",
+          "opponent_name": "Senegal",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "SCO",
+          "opponent_name": "Escocia",
+          "result": "D",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "SEN",
+          "opponent_name": "Senegal",
+          "result": "W",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "home"
+        }
+      ],
+      "points": 10,
+      "goals_for": 5,
+      "goals_against": 8
+    },
+    "JPN": {
+      "last_5": [
+        {
+          "opponent": "BIH",
+          "opponent_name": "Bosnia y Herzegovina",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "BRA",
+          "opponent_name": "Brasil",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "BEL",
+          "opponent_name": "Bélgica",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "TUN",
+          "opponent_name": "Túnez",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "IRN",
+          "opponent_name": "Irán",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "away"
+        }
+      ],
+      "points": 2,
+      "goals_for": 9,
+      "goals_against": 5
+    },
+    "SEN": {
+      "last_5": [
+        {
+          "opponent": "JOR",
+          "opponent_name": "Jordania",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "NZL",
+          "opponent_name": "Nueva Zelanda",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "SAU",
+          "opponent_name": "Arabia Saudita",
+          "result": "D",
+          "goals_for": 4,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "KOR",
+          "opponent_name": "Corea del Sur",
+          "result": "D",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "SUI",
+          "opponent_name": "Suiza",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "away"
+        }
+      ],
+      "points": 6,
+      "goals_for": 11,
+      "goals_against": 4
+    },
+    "AUT": {
+      "last_5": [
+        {
+          "opponent": "SUI",
+          "opponent_name": "Suiza",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "SWE",
+          "opponent_name": "Suecia",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "CRO",
+          "opponent_name": "Croacia",
+          "result": "L",
+          "goals_for": 3,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "NED",
+          "opponent_name": "Países Bajos",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "QAT",
+          "opponent_name": "Catar",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "away"
+        }
+      ],
+      "points": 4,
+      "goals_for": 8,
+      "goals_against": 8
+    },
+    "KOR": {
+      "last_5": [
+        {
+          "opponent": "QAT",
+          "opponent_name": "Catar",
+          "result": "D",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "NOR",
+          "opponent_name": "Noruega",
+          "result": "D",
+          "goals_for": 1,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "JOR",
+          "opponent_name": "Jordania",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "SUI",
+          "opponent_name": "Suiza",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "away"
+        },
+        {
+          "opponent": "SUI",
+          "opponent_name": "Suiza",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "away"
+        }
+      ],
+      "points": 8,
+      "goals_for": 10,
+      "goals_against": 8
+    },
+    "ECU": {
+      "last_5": [
+        {
+          "opponent": "CAN",
+          "opponent_name": "Canadá",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "CRO",
+          "opponent_name": "Croacia",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "PAR",
+          "opponent_name": "Paraguay",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "IRQ",
+          "opponent_name": "Irak",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "EGY",
+          "opponent_name": "Egipto",
+          "result": "W",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "home"
+        }
+      ],
+      "points": 9,
+      "goals_for": 9,
+      "goals_against": 6
+    },
+    "CAN": {
+      "last_5": [
+        {
+          "opponent": "UZB",
+          "opponent_name": "Uzbekistán",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "MEX",
+          "opponent_name": "México",
+          "result": "D",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "TUN",
+          "opponent_name": "Túnez",
+          "result": "L",
+          "goals_for": 3,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "UZB",
+          "opponent_name": "Uzbekistán",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "TUR",
+          "opponent_name": "Turquía",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "away"
+        }
+      ],
+      "points": 5,
+      "goals_for": 7,
+      "goals_against": 6
+    },
+    "AUS": {
+      "last_5": [
+        {
+          "opponent": "ECU",
+          "opponent_name": "Ecuador",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "away"
+        },
+        {
+          "opponent": "PAR",
+          "opponent_name": "Paraguay",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "EGY",
+          "opponent_name": "Egipto",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "FRA",
+          "opponent_name": "Francia",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "GER",
+          "opponent_name": "Alemania",
+          "result": "L",
+          "goals_for": 3,
+          "goals_against": 3,
+          "venue": "away"
+        }
+      ],
+      "points": 9,
+      "goals_for": 10,
+      "goals_against": 11
+    },
+    "EGY": {
+      "last_5": [
+        {
+          "opponent": "JPN",
+          "opponent_name": "Japón",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "BEL",
+          "opponent_name": "Bélgica",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "KOR",
+          "opponent_name": "Corea del Sur",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "MAR",
+          "opponent_name": "Marruecos",
+          "result": "W",
+          "goals_for": 0,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "KOR",
+          "opponent_name": "Corea del Sur",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "home"
+        }
+      ],
+      "points": 3,
+      "goals_for": 6,
+      "goals_against": 9
+    },
+    "CIV": {
+      "last_5": [
+        {
+          "opponent": "ESP",
+          "opponent_name": "España",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "CAN",
+          "opponent_name": "Canadá",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "EGY",
+          "opponent_name": "Egipto",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "CUW",
+          "opponent_name": "Curazao",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "SAU",
+          "opponent_name": "Arabia Saudita",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "away"
+        }
+      ],
+      "points": 9,
+      "goals_for": 7,
+      "goals_against": 5
+    },
+    "IRN": {
+      "last_5": [
+        {
+          "opponent": "SUI",
+          "opponent_name": "Suiza",
+          "result": "L",
+          "goals_for": 3,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "QAT",
+          "opponent_name": "Catar",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "ECU",
+          "opponent_name": "Ecuador",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 3,
+          "venue": "away"
+        },
+        {
+          "opponent": "NZL",
+          "opponent_name": "Nueva Zelanda",
+          "result": "D",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "POR",
+          "opponent_name": "Portugal",
+          "result": "D",
+          "goals_for": 0,
+          "goals_against": 3,
+          "venue": "away"
+        }
+      ],
+      "points": 8,
+      "goals_for": 10,
+      "goals_against": 9
+    },
+    "TUN": {
+      "last_5": [
+        {
+          "opponent": "SAU",
+          "opponent_name": "Arabia Saudita",
+          "result": "D",
+          "goals_for": 0,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "MEX",
+          "opponent_name": "México",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "away"
+        },
+        {
+          "opponent": "JOR",
+          "opponent_name": "Jordania",
+          "result": "D",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "IRQ",
+          "opponent_name": "Irak",
+          "result": "D",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "ECU",
+          "opponent_name": "Ecuador",
+          "result": "W",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "away"
+        }
+      ],
+      "points": 6,
+      "goals_for": 3,
+      "goals_against": 10
+    },
+    "PAR": {
+      "last_5": [
+        {
+          "opponent": "USA",
+          "opponent_name": "Estados Unidos",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "NZL",
+          "opponent_name": "Nueva Zelanda",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "COL",
+          "opponent_name": "Colombia",
+          "result": "D",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "ENG",
+          "opponent_name": "Inglaterra",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "GHA",
+          "opponent_name": "Ghana",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "away"
+        }
+      ],
+      "points": 7,
+      "goals_for": 8,
+      "goals_against": 9
+    },
+    "SCO": {
+      "last_5": [
+        {
+          "opponent": "CAN",
+          "opponent_name": "Canadá",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "BRA",
+          "opponent_name": "Brasil",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 3,
+          "venue": "away"
+        },
+        {
+          "opponent": "CRO",
+          "opponent_name": "Croacia",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "JOR",
+          "opponent_name": "Jordania",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "ALG",
+          "opponent_name": "Argelia",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        }
+      ],
+      "points": 4,
+      "goals_for": 9,
+      "goals_against": 8
+    },
+    "NOR": {
+      "last_5": [
+        {
+          "opponent": "PAR",
+          "opponent_name": "Paraguay",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "USA",
+          "opponent_name": "Estados Unidos",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "JOR",
+          "opponent_name": "Jordania",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "AUT",
+          "opponent_name": "Austria",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "BRA",
+          "opponent_name": "Brasil",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "home"
+        }
+      ],
+      "points": 9,
+      "goals_for": 8,
+      "goals_against": 8
+    },
+    "QAT": {
+      "last_5": [
+        {
+          "opponent": "COD",
+          "opponent_name": "RD Congo",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "CRO",
+          "opponent_name": "Croacia",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "KOR",
+          "opponent_name": "Corea del Sur",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "NOR",
+          "opponent_name": "Noruega",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "GHA",
+          "opponent_name": "Ghana",
+          "result": "W",
+          "goals_for": 0,
+          "goals_against": 0,
+          "venue": "home"
+        }
+      ],
+      "points": 3,
+      "goals_for": 4,
+      "goals_against": 4
+    },
+    "SAU": {
+      "last_5": [
+        {
+          "opponent": "NZL",
+          "opponent_name": "Nueva Zelanda",
+          "result": "W",
+          "goals_for": 4,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "RSA",
+          "opponent_name": "Sudáfrica",
+          "result": "D",
+          "goals_for": 3,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "RSA",
+          "opponent_name": "Sudáfrica",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "SEN",
+          "opponent_name": "Senegal",
+          "result": "D",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "POR",
+          "opponent_name": "Portugal",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 3,
+          "venue": "away"
+        }
+      ],
+      "points": 8,
+      "goals_for": 9,
+      "goals_against": 10
+    },
+    "GHA": {
+      "last_5": [
+        {
+          "opponent": "URU",
+          "opponent_name": "Uruguay",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "JOR",
+          "opponent_name": "Jordania",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "IRN",
+          "opponent_name": "Irán",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "NOR",
+          "opponent_name": "Noruega",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "SWE",
+          "opponent_name": "Suecia",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "away"
+        }
+      ],
+      "points": 3,
+      "goals_for": 6,
+      "goals_against": 11
+    },
+    "PAN": {
+      "last_5": [
+        {
+          "opponent": "AUT",
+          "opponent_name": "Austria",
+          "result": "D",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "NZL",
+          "opponent_name": "Nueva Zelanda",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 0,
+          "venue": "away"
+        },
+        {
+          "opponent": "TUN",
+          "opponent_name": "Túnez",
+          "result": "W",
+          "goals_for": 4,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "BEL",
+          "opponent_name": "Bélgica",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 4,
+          "venue": "away"
+        },
+        {
+          "opponent": "HAI",
+          "opponent_name": "Haití",
+          "result": "W",
+          "goals_for": 3,
+          "goals_against": 0,
+          "venue": "away"
+        }
+      ],
+      "points": 8,
+      "goals_for": 12,
+      "goals_against": 6
+    },
+    "ALG": {
+      "last_5": [
+        {
+          "opponent": "JOR",
+          "opponent_name": "Jordania",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "GER",
+          "opponent_name": "Alemania",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "away"
+        },
+        {
+          "opponent": "GHA",
+          "opponent_name": "Ghana",
+          "result": "W",
+          "goals_for": 4,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "CPV",
+          "opponent_name": "Cabo Verde",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "AUS",
+          "opponent_name": "Australia",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "home"
+        }
+      ],
+      "points": 9,
+      "goals_for": 11,
+      "goals_against": 8
+    },
+    "UZB": {
+      "last_5": [
+        {
+          "opponent": "MAR",
+          "opponent_name": "Marruecos",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "TUN",
+          "opponent_name": "Túnez",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "CIV",
+          "opponent_name": "Costa de Marfil",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "ESP",
+          "opponent_name": "España",
+          "result": "D",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "away"
+        },
+        {
+          "opponent": "SCO",
+          "opponent_name": "Escocia",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        }
+      ],
+      "points": 7,
+      "goals_for": 5,
+      "goals_against": 9
+    },
+    "JOR": {
+      "last_5": [
+        {
+          "opponent": "TUR",
+          "opponent_name": "Turquía",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 3,
+          "venue": "away"
+        },
+        {
+          "opponent": "CZE",
+          "opponent_name": "República Checa",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "ALG",
+          "opponent_name": "Argelia",
+          "result": "D",
+          "goals_for": 0,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "ALG",
+          "opponent_name": "Argelia",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "MEX",
+          "opponent_name": "México",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 3,
+          "venue": "home"
+        }
+      ],
+      "points": 4,
+      "goals_for": 4,
+      "goals_against": 13
+    },
+    "RSA": {
+      "last_5": [
+        {
+          "opponent": "NED",
+          "opponent_name": "Países Bajos",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "ENG",
+          "opponent_name": "Inglaterra",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "JOR",
+          "opponent_name": "Jordania",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "CIV",
+          "opponent_name": "Costa de Marfil",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 4,
+          "venue": "away"
+        },
+        {
+          "opponent": "NOR",
+          "opponent_name": "Noruega",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "home"
+        }
+      ],
+      "points": 0,
+      "goals_for": 3,
+      "goals_against": 12
+    },
+    "CPV": {
+      "last_5": [
+        {
+          "opponent": "NOR",
+          "opponent_name": "Noruega",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "AUS",
+          "opponent_name": "Australia",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 4,
+          "venue": "home"
+        },
+        {
+          "opponent": "NOR",
+          "opponent_name": "Noruega",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "away"
+        },
+        {
+          "opponent": "SUI",
+          "opponent_name": "Suiza",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "FRA",
+          "opponent_name": "Francia",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "home"
+        }
+      ],
+      "points": 0,
+      "goals_for": 2,
+      "goals_against": 14
+    },
+    "NZL": {
+      "last_5": [
+        {
+          "opponent": "BIH",
+          "opponent_name": "Bosnia y Herzegovina",
+          "result": "L",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "AUT",
+          "opponent_name": "Austria",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 4,
+          "venue": "away"
+        },
+        {
+          "opponent": "MAR",
+          "opponent_name": "Marruecos",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "GER",
+          "opponent_name": "Alemania",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "SCO",
+          "opponent_name": "Escocia",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "home"
+        }
+      ],
+      "points": 3,
+      "goals_for": 6,
+      "goals_against": 11
+    },
+    "CZE": {
+      "last_5": [
+        {
+          "opponent": "ECU",
+          "opponent_name": "Ecuador",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "EGY",
+          "opponent_name": "Egipto",
+          "result": "L",
+          "goals_for": 3,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "QAT",
+          "opponent_name": "Catar",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "NOR",
+          "opponent_name": "Noruega",
+          "result": "L",
+          "goals_for": 3,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "CUW",
+          "opponent_name": "Curazao",
+          "result": "D",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "home"
+        }
+      ],
+      "points": 1,
+      "goals_for": 9,
+      "goals_against": 11
+    },
+    "SWE": {
+      "last_5": [
+        {
+          "opponent": "POR",
+          "opponent_name": "Portugal",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "BIH",
+          "opponent_name": "Bosnia y Herzegovina",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "EGY",
+          "opponent_name": "Egipto",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "UZB",
+          "opponent_name": "Uzbekistán",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "NOR",
+          "opponent_name": "Noruega",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        }
+      ],
+      "points": 7,
+      "goals_for": 7,
+      "goals_against": 9
+    },
+    "TUR": {
+      "last_5": [
+        {
+          "opponent": "ESP",
+          "opponent_name": "España",
+          "result": "D",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "GER",
+          "opponent_name": "Alemania",
+          "result": "D",
+          "goals_for": 0,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "ALG",
+          "opponent_name": "Argelia",
+          "result": "D",
+          "goals_for": 2,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "NED",
+          "opponent_name": "Países Bajos",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 1,
+          "venue": "away"
+        },
+        {
+          "opponent": "IRQ",
+          "opponent_name": "Irak",
+          "result": "W",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "home"
+        }
+      ],
+      "points": 6,
+      "goals_for": 3,
+      "goals_against": 9
+    },
+    "COD": {
+      "last_5": [
+        {
+          "opponent": "NED",
+          "opponent_name": "Países Bajos",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 4,
+          "venue": "home"
+        },
+        {
+          "opponent": "ENG",
+          "opponent_name": "Inglaterra",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "NOR",
+          "opponent_name": "Noruega",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "ENG",
+          "opponent_name": "Inglaterra",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "BRA",
+          "opponent_name": "Brasil",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "home"
+        }
+      ],
+      "points": 3,
+      "goals_for": 2,
+      "goals_against": 15
+    },
+    "BIH": {
+      "last_5": [
+        {
+          "opponent": "MEX",
+          "opponent_name": "México",
+          "result": "L",
+          "goals_for": 2,
+          "goals_against": 4,
+          "venue": "away"
+        },
+        {
+          "opponent": "CRO",
+          "opponent_name": "Croacia",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "FRA",
+          "opponent_name": "Francia",
+          "result": "D",
+          "goals_for": 0,
+          "goals_against": 4,
+          "venue": "home"
+        },
+        {
+          "opponent": "FRA",
+          "opponent_name": "Francia",
+          "result": "D",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "BRA",
+          "opponent_name": "Brasil",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "away"
+        }
+      ],
+      "points": 2,
+      "goals_for": 3,
+      "goals_against": 15
+    },
+    "IRQ": {
+      "last_5": [
+        {
+          "opponent": "GHA",
+          "opponent_name": "Ghana",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "TUR",
+          "opponent_name": "Turquía",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 3,
+          "venue": "away"
+        },
+        {
+          "opponent": "QAT",
+          "opponent_name": "Catar",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "SCO",
+          "opponent_name": "Escocia",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "SEN",
+          "opponent_name": "Senegal",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "away"
+        }
+      ],
+      "points": 6,
+      "goals_for": 4,
+      "goals_against": 9
+    },
+    "HAI": {
+      "last_5": [
+        {
+          "opponent": "CPV",
+          "opponent_name": "Cabo Verde",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "BIH",
+          "opponent_name": "Bosnia y Herzegovina",
+          "result": "W",
+          "goals_for": 0,
+          "goals_against": 0,
+          "venue": "home"
+        },
+        {
+          "opponent": "USA",
+          "opponent_name": "Estados Unidos",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "IRN",
+          "opponent_name": "Irán",
+          "result": "L",
+          "goals_for": 1,
+          "goals_against": 3,
+          "venue": "home"
+        },
+        {
+          "opponent": "EGY",
+          "opponent_name": "Egipto",
+          "result": "L",
+          "goals_for": 0,
+          "goals_against": 1,
+          "venue": "away"
+        }
+      ],
+      "points": 3,
+      "goals_for": 2,
+      "goals_against": 8
+    },
+    "CUW": {
+      "last_5": [
+        {
+          "opponent": "POR",
+          "opponent_name": "Portugal",
+          "result": "D",
+          "goals_for": 1,
+          "goals_against": 4,
+          "venue": "home"
+        },
+        {
+          "opponent": "UZB",
+          "opponent_name": "Uzbekistán",
+          "result": "W",
+          "goals_for": 2,
+          "goals_against": 2,
+          "venue": "home"
+        },
+        {
+          "opponent": "TUN",
+          "opponent_name": "Túnez",
+          "result": "D",
+          "goals_for": 0,
+          "goals_against": 1,
+          "venue": "home"
+        },
+        {
+          "opponent": "HAI",
+          "opponent_name": "Haití",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 2,
+          "venue": "away"
+        },
+        {
+          "opponent": "GHA",
+          "opponent_name": "Ghana",
+          "result": "W",
+          "goals_for": 1,
+          "goals_against": 1,
+          "venue": "away"
+        }
+      ],
+      "points": 11,
+      "goals_for": 5,
+      "goals_against": 10
+    }
+  }
+}
