@@ -118,23 +118,28 @@ function MatchRow({ m, convertTime }) {
           )}
         </div>
 
-        {/* Centro: equipos centrados */}
-        <div className="flex-1 flex items-center justify-center gap-3 min-w-0">
-          <span className="flex items-center justify-end gap-2 min-w-0">
-            <span className="font-medium truncate">{m.home.name}</span>
+        {/* Centro: equipos alineados en grid de 5 columnas */}
+        <div className="flex-1 grid grid-cols-[1fr_24px_32px_24px_1fr] items-center gap-2 min-w-0">
+          {/* Nombre local — derecha */}
+          <span className="font-medium truncate text-right">{m.home.name}</span>
+          {/* Bandera local */}
+          <span className="flex justify-center">
             <Flag
               teamId={m.home.id}
-              className="w-5 h-3.5 rounded-sm shrink-0 ring-1 ring-white/10"
+              className="w-5 h-3.5 rounded-sm ring-1 ring-white/10"
             />
           </span>
-          <span className="text-slate-500 text-sm shrink-0">vs</span>
-          <span className="flex items-center justify-start gap-2 min-w-0">
+          {/* VS — centrado */}
+          <span className="text-slate-500 text-sm text-center">vs</span>
+          {/* Bandera visita */}
+          <span className="flex justify-center">
             <Flag
               teamId={m.away.id}
-              className="w-5 h-3.5 rounded-sm shrink-0 ring-1 ring-white/10"
+              className="w-5 h-3.5 rounded-sm ring-1 ring-white/10"
             />
-            <span className="font-medium truncate">{m.away.name}</span>
           </span>
+          {/* Nombre visita — izquierda */}
+          <span className="font-medium truncate text-left">{m.away.name}</span>
         </div>
 
         {/* Derecha: chevron */}
