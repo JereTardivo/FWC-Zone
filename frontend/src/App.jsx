@@ -29,7 +29,7 @@ export default function App() {
           <img
             src="/logo.png"
             alt="Tactiqo"
-            className="h-14 md:h-20 object-contain"
+            className="h-16 md:h-28 w-auto object-contain"
           />
         </a>
         <TimezoneSelector selected={timezone.selected} onChange={timezone.setSelected} />
