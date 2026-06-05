@@ -12,6 +12,7 @@ from .data_loader import (
     load_recent_form, strength_index, form_factor, squad_market_value, avg_market_value,
 )
 from .engine.probability import predict_match
+from .engine.ml_predictor import MLPredictor
 from .simulator import TournamentSimulator
 
 app = FastAPI(
@@ -181,6 +182,18 @@ def predict(req: MatchRequest):
         away_market=max(0.5, squad_market_value(req.away) / avg_mv) if squad_market_value(req.away) > 0 else 1.0,
     )
     return pred.__dict__
+
+
+@app.post("/api/predict-ml")
+def predict_ml(req: MatchRequest):
+    """Prediccion alternativa via Gradient Boosting (entrenado sobre Mundiales 1998-2022)."""
+    ml = MLPredictor()
+    if not ml.is_ready():
+        raise HTTPException(status_code=503, detail="Modelo ML no disponible. Ejecutar: python -m backend.scripts.train_ml_model")
+    result = ml.predict(req.home, req.away, neutral=req.neutral)
+    if result is None:
+        raise HTTPException(status_code=404, detail="Equipo no encontrado")
+    return result
 
 
 @app.get("/api/simulate")

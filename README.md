@@ -112,15 +112,37 @@ Over 2.5 (9% de mejora). El script de grid search está en
 
 ## Próximos pasos (ideas para hacerlo "ultrapotente")
 
+### Modelo ML alternativo (Gradient Boosting)
+
+Ademas del motor Elo/Poisson, hay un modelo de **Gradient Boosting** entrenado
+sobre **643 partidos de Mundiales 1998-2022**.
+
+**Features:** `elo_diff`, `elo_sum`, `attack_diff`, `defense_diff`, `rank_diff`,
+`elo_home/away`, `attack_home/away`, `defense_home/away`, `rank_home/away`,
+`same_confederation`, `knockout`.
+
+**Performance (CV 5-fold):**
+- Accuracy: **56.8%** (+/- 3.4%)
+- LogLoss: **1.24** (+/- 0.12)
+
+**Uso:**
+```bash
+# Entrenar
+python -m backend.scripts.train_ml_model
+
+# Predecir via API
+POST /api/predict-ml  {home: "ARG", away: "FRA", neutral: true}
+```
+
 ### ✅ Realizado
 
 - [x] Cargar ratings reales (FIFA/Elo) y actualizar tras cada fecha.
-- [x] Factores externos: forma reciente (últimos 5 partidos), valor de mercado del plantel, sedes con altitud/clima y zonas horarias.
-- [x] Modelo Poisson bivariado con correlación (Dixon-Coles) para marcadores bajos.
-- [x] Calibración con históricos de Mundiales (backtesting + Brier score).
+- [x] Factores externos: forma reciente (ultimos 5 partidos), valor de mercado del plantel, sedes con altitud/clima y zonas horarias.
+- [x] Modelo Poisson bivariado con correlacion (Dixon-Coles) para marcadores bajos.
+- [x] Calibracion con historicos de Mundiales (backtesting + Brier score).
+- [x] Modelo ML (gradient boosting) sobre features de equipos como alternativa al Elo.
 
 ### 🔄 Pendiente
 
-- [ ] Persistencia (SQLite/Postgres) y actualización de resultados en vivo.
-- [ ] Modelo ML (gradient boosting) sobre features de equipos como alternativa al Elo.
+- [ ] Persistencia (SQLite/Postgres) y actualizacion de resultados en vivo.
 ```
