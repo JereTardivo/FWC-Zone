@@ -24,12 +24,12 @@ export default function App() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <header className="flex items-center justify-between gap-3 mb-2 flex-wrap">
+      <header className="flex items-center justify-between gap-3 mb-4 py-2 flex-wrap">
         <a href="/" className="flex items-center" title="Tactiqo — Mundial 2026">
           <img
             src="/logo.png"
             alt="Tactiqo"
-            className="h-12 md:h-14 object-contain"
+            className="h-14 md:h-20 object-contain"
           />
         </a>
         <TimezoneSelector selected={timezone.selected} onChange={timezone.setSelected} />
