@@ -81,6 +81,24 @@ Con esos λ se arma la **matriz de marcadores Poisson** y de ahí salen todas la
 probabilidades (1X2, over/under, BTTS, marcadores exactos). La simulación
 Monte Carlo muestrea goles partido a partido a lo largo de todo el cuadro.
 
+## Resultados del backtesting
+
+Se evaluó el modelo contra **123 partidos de los Mundiales 2014, 2018 y 2022**
+usando ratings Elo históricos (eloratings.net) y resultados reales.
+
+| Métrica | Brier Score | Baseline (random) |
+|---|---|---|
+| 1X2 (3-outcome) | **0.5000** | 0.6667 |
+| Victoria local | 0.1863 | 0.2500 |
+| Empate | 0.1418 | 0.2500 |
+| Victoria visita | 0.1719 | 0.2500 |
+| Over 2.5 | 0.2712 | 0.2500 |
+| BTTS | 0.2613 | 0.2500 |
+
+**Interpretación:** El modelo supera el baseline random en 1X2, pero
+Over/BTTS están cerca del límite — posible sesgo a sobreestimar goles.
+Script: `python -m backend.scripts.backtest`
+
 ## Próximos pasos (ideas para hacerlo "ultrapotente")
 
 ### ✅ Realizado
@@ -88,10 +106,10 @@ Monte Carlo muestrea goles partido a partido a lo largo de todo el cuadro.
 - [x] Cargar ratings reales (FIFA/Elo) y actualizar tras cada fecha.
 - [x] Factores externos: forma reciente (últimos 5 partidos), valor de mercado del plantel, sedes con altitud/clima y zonas horarias.
 - [x] Modelo Poisson bivariado con correlación (Dixon-Coles) para marcadores bajos.
+- [x] Calibración con históricos de Mundiales (backtesting + Brier score).
 
 ### 🔄 Pendiente
 
-- [ ] Calibración con históricos de Mundiales (backtesting + Brier score).
 - [ ] Persistencia (SQLite/Postgres) y actualización de resultados en vivo.
 - [ ] Modelo ML (gradient boosting) sobre features de equipos como alternativa al Elo.
 ```
