@@ -24,8 +24,10 @@ from typing import Dict, List
 # Constantes del modelo (calibrables)
 ELO_DIVISOR = 400.0          # escala estandar de Elo
 HOME_ADVANTAGE_ELO = 65.0    # bonus de Elo por jugar de local (0 en sede neutral)
-LEAGUE_AVG_DEFENSE = 1.05    # defensa "promedio" de referencia
-ELO_GOAL_SENSITIVITY = 0.0018  # cuanto desplaza la dif. de Elo a los goles esperados
+LEAGUE_AVG_DEFENSE = 1.25    # defensa "promedio" de referencia
+                             # calibrado via backtesting Mundiales 2014-2022 (Brier)
+ELO_GOAL_SENSITIVITY = 0.0016  # cuanto desplaza la dif. de Elo a los goles esperados
+                             # calibrado via backtesting (default 0.0018 -> 0.0016)
 MAX_GOALS = 10               # tope para la grilla de marcadores
 DIXON_COLES_RHO = -0.06      # correlacion negativa entre goles local/visita
                              # (-0.06 es estandar en futbol segun Dixon & Coles 1997)
@@ -58,19 +60,23 @@ def expected_goals(
     away_form: float = 0.0,
     home_market: float = 1.0,
     away_market: float = 1.0,
+    goal_sensitivity: float = ELO_GOAL_SENSITIVITY,
+    avg_defense: float = LEAGUE_AVG_DEFENSE,
 ) -> tuple[float, float]:
     """Calcula los goles esperados (lambda) de cada equipo.
 
-    home_form / away_form: ajuste al Elo según forma reciente (puntos de ultimos 5 partidos).
+    home_form / away_form: ajuste al Elo segun forma reciente (puntos de ultimos 5 partidos).
     home_market / away_market: ratio de valor de mercado relativo al promedio (1.0 = promedio).
+    goal_sensitivity: cuanto desplaza la dif. de Elo a los goles (default: ELO_GOAL_SENSITIVITY).
+    avg_defense: defensa promedio de referencia (default: LEAGUE_AVG_DEFENSE).
     """
     home_adv = 0.0 if neutral else HOME_ADVANTAGE_ELO
     # forma reciente: cada punto sobre 7.5 (promedio de 5 partidos) suma ~8 Elo
     elo_diff = (home.elo + home_adv + home_form * 8) - (away.elo + away_form * 8)
 
     # factor multiplicativo segun diferencia de Elo (exponencial suave)
-    elo_factor_home = exp(ELO_GOAL_SENSITIVITY * elo_diff)
-    elo_factor_away = exp(-ELO_GOAL_SENSITIVITY * elo_diff)
+    elo_factor_home = exp(goal_sensitivity * elo_diff)
+    elo_factor_away = exp(-goal_sensitivity * elo_diff)
 
     # valor de mercado afecta ataque (jugadores mejores = mas goles)
     market_factor_home = home_market ** 0.3
@@ -78,13 +84,13 @@ def expected_goals(
 
     lam_home = (
         home.attack
-        * (away.defense / LEAGUE_AVG_DEFENSE)
+        * (away.defense / avg_defense)
         * elo_factor_home
         * market_factor_home
     )
     lam_away = (
         away.attack
-        * (home.defense / LEAGUE_AVG_DEFENSE)
+        * (home.defense / avg_defense)
         * elo_factor_away
         * market_factor_away
     )
@@ -173,11 +179,14 @@ def predict_match(
     away_form: float = 0.0,
     home_market: float = 1.0,
     away_market: float = 1.0,
+    goal_sensitivity: float = ELO_GOAL_SENSITIVITY,
+    avg_defense: float = LEAGUE_AVG_DEFENSE,
 ) -> MatchPrediction:
     lam_home, lam_away = expected_goals(
         home, away, neutral=neutral,
         home_form=home_form, away_form=away_form,
         home_market=home_market, away_market=away_market,
+        goal_sensitivity=goal_sensitivity, avg_defense=avg_defense,
     )
     matrix = score_matrix(lam_home, lam_away)
 

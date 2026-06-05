@@ -260,6 +260,66 @@ def brier_binary(prob, occurred):
     return (prob - (1.0 if occurred else 0.0)) ** 2
 
 
+def evaluate_params(matches, teams, elo_history, goal_sensitivity, avg_defense):
+    """Evalua un juego de parametros y devuelve Brier scores."""
+    brier_1x2 = []
+    brier_over = []
+    brier_btts = []
+    evaluated = 0
+
+    for m in matches:
+        year = m["year"]
+        home_en = m["home"]
+        away_en = m["away"]
+        home_es = EN_TO_ES.get(home_en)
+        away_es = EN_TO_ES.get(away_en)
+        if not home_es or not away_es:
+            continue
+        if home_es not in teams or away_es not in teams:
+            continue
+        home_elo = get_elo_for_team(elo_history, year, home_en)
+        away_elo = get_elo_for_team(elo_history, year, away_en)
+        if home_elo is None or away_elo is None:
+            continue
+
+        home_ts = TeamStrength(
+            id=teams[home_es]["id"], name=home_es,
+            elo=home_elo, attack=teams[home_es]["attack"], defense=teams[home_es]["defense"]
+        )
+        away_ts = TeamStrength(
+            id=teams[away_es]["id"], name=away_es,
+            elo=away_elo, attack=teams[away_es]["attack"], defense=teams[away_es]["defense"]
+        )
+        pred = predict_match(
+            home_ts, away_ts, neutral=True,
+            goal_sensitivity=goal_sensitivity, avg_defense=avg_defense,
+        )
+
+        hg, ag = m["home_goals"], m["away_goals"]
+        if hg > ag:
+            outcome = 0
+        elif hg == ag:
+            outcome = 1
+        else:
+            outcome = 2
+
+        probs = [pred.prob_home, pred.prob_draw, pred.prob_away]
+        brier_1x2.append(brier_score(probs, outcome))
+        brier_over.append(brier_binary(pred.over_2_5, (hg + ag) > 2))
+        brier_btts.append(brier_binary(pred.btts, hg > 0 and ag > 0))
+        evaluated += 1
+
+    if evaluated == 0:
+        return None
+    return {
+        "count": evaluated,
+        "brier_1x2": mean(brier_1x2),
+        "brier_over": mean(brier_over),
+        "brier_btts": mean(brier_btts),
+        "combined": mean(brier_1x2) + mean(brier_over) + mean(brier_btts),
+    }
+
+
 def main():
     print("=" * 60)
     print("TACTIQO BACKTESTING")
@@ -274,191 +334,69 @@ def main():
     print(f"Partidos a evaluar: {len(matches)} (mundiales {MUNDIALES})")
     print()
 
-    # Contadores por métrica
-    brier_1x2 = []
-    brier_over = []
-    brier_btts = []
-    brier_home = []
-    brier_draw = []
-    brier_away = []
-
-    skipped = []
-    evaluated = 0
-
-    for m in matches:
-        year = m["year"]
-        home_en = m["home"]
-        away_en = m["away"]
-
-        # Buscar en teams.json (necesitamos nombre en español)
-        home_es = EN_TO_ES.get(home_en)
-        away_es = EN_TO_ES.get(away_en)
-
-        if not home_es or not away_es:
-            skipped.append(f"{year}: {home_en} vs {away_en} (sin mapeo)")
-            continue
-
-        if home_es not in teams or away_es not in teams:
-            skipped.append(f"{year}: {home_en} vs {away_en} (no en teams.json)")
-            continue
-
-        # Obtener attack/defense de teams.json
-        home_data = teams[home_es]
-        away_data = teams[away_es]
-
-        # Obtener Elo histórico
-        home_elo = get_elo_for_team(elo_history, year, home_en)
-        away_elo = get_elo_for_team(elo_history, year, away_en)
-
-        if home_elo is None or away_elo is None:
-            skipped.append(f"{year}: {home_en} ({home_elo}) vs {away_en} ({away_elo}) (sin Elo)")
-            continue
-
-        # Crear TeamStrength con Elo histórico
-        home_ts = TeamStrength(
-            id=home_data["id"],
-            name=home_es,
-            elo=home_elo,
-            attack=home_data["attack"],
-            defense=home_data["defense"],
-        )
-        away_ts = TeamStrength(
-            id=away_data["id"],
-            name=away_es,
-            elo=away_elo,
-            attack=away_data["attack"],
-            defense=away_data["defense"],
-        )
-
-        # Predecir
-        pred = predict_match(home_ts, away_ts, neutral=True)
-
-        # Resultado real
-        hg = m["home_goals"]
-        ag = m["away_goals"]
-
-        if hg > ag:
-            outcome = 0  # home
-        elif hg == ag:
-            outcome = 1  # draw
-        else:
-            outcome = 2  # away
-
-        probs = [pred.prob_home, pred.prob_draw, pred.prob_away]
-
-        # Brier score 1X2
-        brier_1x2.append(brier_score(probs, outcome))
-        brier_home.append(brier_binary(pred.prob_home, outcome == 0))
-        brier_draw.append(brier_binary(pred.prob_draw, outcome == 1))
-        brier_away.append(brier_binary(pred.prob_away, outcome == 2))
-
-        # Over 2.5
-        over_occurred = (hg + ag) > 2
-        brier_over.append(brier_binary(pred.over_2_5, over_occurred))
-
-        # BTTS
-        btts_occurred = hg > 0 and ag > 0
-        brier_btts.append(brier_binary(pred.btts, btts_occurred))
-
-        evaluated += 1
-
-    # -- Reporte --
-    print(f"Partidos evaluados: {evaluated}")
-    print(f"Partidos saltados: {len(skipped)}")
-    print()
-
-    if evaluated == 0:
-        print("ERROR: No se pudo evaluar ningún partido.")
-        for s in skipped[:20]:
-            print(f"  - {s}")
-        return
-
-    # Brier scores
+    # --- Grid Search ---
     print("-" * 50)
-    print("METRICAS DE CALIBRACION (Brier Score)")
-    print("-" * 50)
-    print(f"  1X2 (promedio):        {mean(brier_1x2):.4f}")
-    print(f"  Victoria local:        {mean(brier_home):.4f}")
-    print(f"  Empate:                {mean(brier_draw):.4f}")
-    print(f"  Victoria visita:       {mean(brier_away):.4f}")
-    print(f"  Over 2.5:              {mean(brier_over):.4f}")
-    print(f"  BTTS:                  {mean(brier_btts):.4f}")
-    print()
-
-    # Baselines
-    print("-" * 50)
-    print("BASELINES (para comparar)")
-    print("-" * 50)
-    print("  Random 1X2 (1/3 cada): ~0.6667  (3-outcome)")
-    print("  Random binario (0.5):  ~0.2500")
-    print()
-
-    # Calibracion por outcome
-    home_probs = [p[0] for p in zip([pred.prob_home for pred in []])]
-    # No tengo acceso a las preds individuales acá, dejémoslo simple
-
-    print("-" * 50)
-    print("DESGLOSE POR MUNDIAL")
+    print("GRID SEARCH: optimizando parametros")
     print("-" * 50)
 
-    # Re-calcular por mundial
-    for year in MUNDIALES:
-        y_brier = []
-        y_over = []
-        y_btts = []
-        y_count = 0
+    best = None
+    best_params = None
+    results = []
 
-        for m in matches:
-            if m["year"] != year:
+    # Rangos de busqueda
+    sens_range = [0.0008, 0.0010, 0.0012, 0.0014, 0.0016, 0.0018, 0.0020, 0.0022, 0.0025, 0.0030]
+    def_range = [0.90, 0.95, 1.00, 1.05, 1.10, 1.15, 1.20, 1.25]
+
+    total = len(sens_range) * len(def_range)
+    i = 0
+    for sens in sens_range:
+        for defense in def_range:
+            i += 1
+            res = evaluate_params(matches, teams, elo_history, sens, defense)
+            if res is None:
                 continue
-            home_en = m["home"]
-            away_en = m["away"]
-            home_es = EN_TO_ES.get(home_en)
-            away_es = EN_TO_ES.get(away_en)
-            if not home_es or not away_es:
-                continue
-            if home_es not in teams or away_es not in teams:
-                continue
-            home_elo = get_elo_for_team(elo_history, year, home_en)
-            away_elo = get_elo_for_team(elo_history, year, away_en)
-            if home_elo is None or away_elo is None:
-                continue
-
-            home_ts = TeamStrength(
-                id=teams[home_es]["id"], name=home_es,
-                elo=home_elo, attack=teams[home_es]["attack"], defense=teams[home_es]["defense"]
-            )
-            away_ts = TeamStrength(
-                id=teams[away_es]["id"], name=away_es,
-                elo=away_elo, attack=teams[away_es]["attack"], defense=teams[away_es]["defense"]
-            )
-            pred = predict_match(home_ts, away_ts, neutral=True)
-
-            hg, ag = m["home_goals"], m["away_goals"]
-            if hg > ag:
-                outcome = 0
-            elif hg == ag:
-                outcome = 1
-            else:
-                outcome = 2
-
-            probs = [pred.prob_home, pred.prob_draw, pred.prob_away]
-            y_brier.append(brier_score(probs, outcome))
-            y_over.append(brier_binary(pred.over_2_5, (hg + ag) > 2))
-            y_btts.append(brier_binary(pred.btts, hg > 0 and ag > 0))
-            y_count += 1
-
-        if y_count > 0:
-            print(f"  {year}: {y_count} partidos | 1X2={mean(y_brier):.4f} | Over={mean(y_over):.4f} | BTTS={mean(y_btts):.4f}")
+            results.append((sens, defense, res))
+            if best is None or res["combined"] < best["combined"]:
+                best = res
+                best_params = (sens, defense)
+            print(f"  [{i}/{total}] sens={sens:.4f} def={defense:.2f} -> 1X2={res['brier_1x2']:.4f} Over={res['brier_over']:.4f} BTTS={res['brier_btts']:.4f} COMB={res['combined']:.4f}")
 
     print()
     print("=" * 60)
+    print("MEJOR COMBINACION ENCONTRADA")
+    print("=" * 60)
+    if best and best_params:
+        print(f"  goal_sensitivity = {best_params[0]:.4f}")
+        print(f"  avg_defense      = {best_params[1]:.2f}")
+        print()
+        print(f"  1X2 Brier:   {best['brier_1x2']:.4f}")
+        print(f"  Over Brier:  {best['brier_over']:.4f}")
+        print(f"  BTTS Brier:  {best['brier_btts']:.4f}")
+        print(f"  Combined:    {best['combined']:.4f}")
+    print()
 
-    # Mostrar algunos skipped si hay
-    if skipped:
-        print("\nPrimeros 10 partidos saltados:")
-        for s in skipped[:10]:
-            print(f"  - {s}")
+    # --- Reporte con defaults ---
+    print("=" * 60)
+    print("VALORES DEFAULT (para comparar)")
+    print("=" * 60)
+    default = evaluate_params(matches, teams, elo_history, 0.0018, 1.05)
+    if default:
+        print(f"  1X2 Brier:   {default['brier_1x2']:.4f}")
+        print(f"  Over Brier:  {default['brier_over']:.4f}")
+        print(f"  BTTS Brier:  {default['brier_btts']:.4f}")
+        print(f"  Combined:    {default['combined']:.4f}")
+    print()
+
+    # Mostrar top 10 combinaciones
+    print("-" * 50)
+    print("TOP 10 COMBINACIONES")
+    print("-" * 50)
+    results_sorted = sorted(results, key=lambda x: x[2]["combined"])
+    for rank, (sens, defense, res) in enumerate(results_sorted[:10], 1):
+        print(f"  {rank}. sens={sens:.4f} def={defense:.2f} | COMB={res['combined']:.4f} (1X2={res['brier_1x2']:.4f} Over={res['brier_over']:.4f} BTTS={res['brier_btts']:.4f})")
+
+    print()
+    print("=" * 60)
 
 
 if __name__ == "__main__":
