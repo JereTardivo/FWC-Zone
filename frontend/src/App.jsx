@@ -27,9 +27,9 @@ export default function App() {
       <header className="flex items-center justify-between gap-3 mb-4 py-2 flex-wrap">
         <a href="/" className="flex items-center" title="Tactiqo — Mundial 2026">
           <img
-            src="/logo.png"
+            src="/logo.svg"
             alt="Tactiqo"
-            className="h-16 md:h-28 w-auto object-contain"
+            className="h-20 md:h-36 w-auto"
           />
         </a>
         <TimezoneSelector selected={timezone.selected} onChange={timezone.setSelected} />
